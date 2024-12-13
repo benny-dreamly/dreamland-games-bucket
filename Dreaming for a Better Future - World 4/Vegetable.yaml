@@ -1,0 +1,315 @@
+#                                                                                                    
+#                                                                                 .    .:            
+#                                                                                :+:  :;; ;+. .      
+#                                                                              .  :   :X&XXX;   ..   
+#                                                          . . . . . .   ..    .  ;  ::+XxXX;  .     
+#                                                        .::::..........::::      ; ;;::: ;;;:...    
+#                                                   ::::: :XXXXXXXXXXXXXXXX;:::; :X++++;;.;;.:;.     
+#                                                         ;XXXXXXXXXXXXXXXX;   . :Xxx++;: ::.;;.     
+#                                                .:.+XXXXXXX++++++++++++++XXXXX++++:     ;xX;.:.     
+#                                             ..: ::+xXxxxXXx+++++++++++++++x+++;;;:      ;+  .      
+#                                            .   :xXxxx++xx+x+x++++++++++++++++X+;;:      ;+  .      
+#                                           .: ;XXXXXXX;:.  .:x+;;;;;;:::;;;;;;x;;::. .  :+X. .      
+#              .::                      ..: .;;+XxXX;;::.:+xXXXXXXXx+XXXXXXXXXxx+;;;: .  ;XX; .      
+#             ......                    ..:.+XXXXXx+;:...;+XXXXXXXXX+XXXXXXXXXXxx+X+: :::+XX;        
+#        ....  ;X+.;::                  :+XXXX++x:  :+X+x+;::. .:::;+:;;:..++xX&$Xxx   .::xX;:       
+#         .: :.:++;;: .               .: :X++x+++;;:+XX;;::    .;++$&+xX.  ;+xX&&&X$:.:+X;:;..       
+#        :++:.:;++xX+;.              .::  +;++++++xX$&&;:..     ;+X&&XXX.  :;+X&&&&&+:x&&+           
+#    .:::::.:;+X&$;.                  :xX+X+;:+XXX+x$&&;: .     ;+;X$$&&+  ;+xx$XXX$&$&&&X           
+#    . :;.:;.:;+$+;:  ;..  .....   .:.:XXxXXX+xXXxXxX&$+X;:     ;x+X$XXX;::;:;;+++x+++$&&X           
+#     :+X;;;  .;+++;:.;;: .::::::  .:. ++xXXXXXx+xXx+xXxXx;     +XxX$+;+;xXx+;: :.;:::X&&$           
+#     .;+;++xXX+++++XXXx. :&&$XX;  X&$XXXXxXXx$$$$XXXXXXX+;    .;X+XXX+;+x+:      ;::::+X:           
+#     .;+;+++xx;::;:;+X+.::X&XXX;  X&$XXXXxX+;xXXXXXXXXXXX+;;;:;;;+xX+:.;++:. . ::x;;:;+X:..         
+#     :;;++;;;:..    .+::;;::X&&X  +$$XXXXXXX;x++XXXXXXX$&&&&&Xx;::;+    .:..::::;++xx+;+.:;:        
+#        .;;.::.:.    :;++;;:.:;.  ;$XXXX+.::::::;xXxXXX$Xx;;+;+;;;::;;;xXX&&&&&&&&&&&&&&&&&X.       
+#        .:;::;::..   .:;+;;+.::.  +&$XXx+.::::::;XXxXXXXx+;;+;++x+::;++xXX&&&&&&&&&&&&&&&&&x        
+#           ;XX+;.        .;X      .$X;..      :::;+;xx+XXX+x+;+xXXX+&&&&&&$XXXXXXXXXXX&&&&&$        
+#           :;+:+;;:..    :+X:::$&&&&&;...   ..:;+$$xXx;;;;.;;;+$&X++;:::::;;;;;;;;;:::::.+X.        
+#           :;;:;;;;:.    :xX;:;$&&&&$+:.. ..::;;+$&XXx;;:: :;;+XXXxx;...  :;;:;::;:: ..:.;;..       
+#              :;: :.: :  +&&&&&&&&&&&&$+:.::;;++X&&&&$;::. :;+;:::;+:     :;+;+++x;       .         
+#                 .X;; ;++;;;x&&&&&&&&&&&&X$X+$&&&&&&&&$&x+:;;:;;+;++;:::  ;++;+++x;:.::;:++:.       
+#                 .&+; ;+X;::+&&&&&&&&&&&&&&$x&&&&&&&&&&&$x;;; ;;+;++;;::  ;++;++++;:.::+:;+:.       
+#                +&&&$:+X&X::+X$$&&&&&&&&&$&&$&&&&&&&&&&&&&&X:...::;++xX+::;;;;;::;+xXXXXX           
+#                .:$$X+$&&$x+xXx$&&&&&&&&&X$$X&&&&&&&&&&&&&&&$+++++;;;;;;;;;;+++x+xx+;++x:           
+#                .:;+x&&&&&XXXxxX$&&&&&&$$X$$$&&&&&&&&&&&&&&&&&&X+;:::::;+++;+xXXXXX+:;:;;:          
+#                   .+&&&&&$Xxx+$&&&&&&&&&$$X+X$&&&&x;;$&&&&&&&&&&&&&$x++++::::;;;x; ;:.             
+#                   :+&&&&&&&$xx$&&&&&&&&&X$&&&&&&&&;  X&&&&&&&&&&&&&&$$$$$x++++++X+...              
+#                   :;&&&&&&&&$$$X$$X$&&&&X$&&&&&&&&   :X&$&&&&&&&&&&&&&&&&&&&&&&&&$.                
+#                   . X:+X$&&&&&Xx++++x&$&&&&$&&&&&&:: :;xX$$X+X$&&&&&&&&&&&&&&&&&&&;                
+#                   ..&;;:x&&&&&$xxxxxxXXX$XXX$&&&&&x:.+XXxX++X+;:x&&&&&&&&&&&&X$&&&:                
+#                   :;&+:::;+&&&&$$$$xx++++x++xXX&&&&&$XXXXx+++:..::::::+XXXXXXX+;;;:                
+#                   ;+&&&$+:::::X&&&&&$Xxx+xxxxx+X$&&&&X+XXXX+:. .....:::;+;;;;X:..                  
+#                   ;+&&&&$:::::X&&&&&&&$XxXxxxxxxxx$&&XXxXXXx;;: .  .::;;;;;;;X:.                   
+#                   :+&&&&&X+::::X&$&&&&&&$Xx++xx+++x$&$$x+;;+++;;+;;xxxxx+++++X;:.                  
+#                   :+&&&&&&&&&&&&&&&&&&&&&&$xXXXXxx$&&&&&&$XXxXx+xx+++++++++++X;:                   
+#                   :+&&&&&&&&&&&&&&&&&&&&&&&$$$$$$$&&&&&&&&XXxXXxxXxx+++++++++X;::.                 
+#                   :+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&X+:;+++++++++++++++X. ;:.                
+#                   :+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&$XXXX;+++++++++;;;++++xXX&X                 
+#                   :+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&$XXXXXX+++;+++++++++++++;XX$X:.               
+#                   x&&&&&&&$&&$&$&&&&&&&&&&&&&&&&&&&$XXXXXXXXXXx+xxxx++XXXX;:;:++X;;;:              
+#                   ::X++X;:::::::::;;;:;;+;;+;;;xXXXXXXX++:;;++xxXx+XXX+;:+Xxx++xXX$&$;;;:::::.     
+#                   .:;:;$:::::::::::::::::::::::;XXXXXx++;::;++x+X+;XXX+::+XXXxxxxX$&&+;:  ::::     
+#                      .&&&;:::::::..             xXxxx;:;xXXXXX.     ..:::;+++xxxxX++XXXXXXXXXx.    
+#                      .+$$&&$XX+;;:;::...     .:;XXXXXXXxx;;;:.      ::+XX+;+XXXXXXx+XXXXXxXXX;.    
+#                      :;;$&&&&$++;;;;;:::..  .::;XXXXXXXX++:.       .:;XXXx;;XXXXXXXXXxx+:.;XX. .   
+#                          :;$&&&&&$x+XX+;:;+X&&&&&&&&&&&&&&XXXX+ ::.;::XXXXXXXX+;+xXxXXXXXXXXX+ .   
+#                          ..;X&xXx;::;;:: :;xX$&$$XXXXX$$XXxxX+: .     :xx;;:;:::+:;+;:::::;++.     
+#                                            .              .:;                                      
+
+description: "Mellow's Multi Yaml for Shorts"
+game:
+  Super Mario 64: 0
+  Minecraft: 10
+# Donkey Kong Country 3: 0 
+# Super Mario World: 20
+  A Short Hike: 0
+# Kirby's Dream Land 3: 20 
+  Lingo: 0
+
+Super Mario 64:
+  progression_balancing: 50
+  accessibility: items
+  area_rando: courses_and_secrets_separate
+  buddy_checks: 'true'
+  exclamation_boxes: 1ups_only
+  progressive_keys: 'false'
+  enable_coin_stars: 'true'
+  enable_move_rando: 'true'
+  move_rando_actions:
+    - Triple Jump
+    - Long Jump
+    - Backflip
+    - Side Flip
+    - Wall Kick
+    - Dive
+    - Ground Pound
+    - Kick
+    - Climb
+    - Ledge Grab
+  strict_cap_requirements: 'true'
+  strict_cannon_requirements: 'true'
+  strict_move_requirements: 'true'
+  amount_of_stars: 120
+  first_bowser_star_door_cost: 7
+  basement_star_door_cost: 25
+  second_floor_star_door_cost: 42
+  mips1_cost: 12
+  mips2_cost: 42
+  stars_to_finish: 58
+  death_link: 'false'
+  completion_type: last_bowser_stage
+
+Minecraft:
+  progression_balancing: 50
+  accessibility: items
+  advancement_goal: 50
+  egg_shards_required: 0
+  egg_shards_available: 0
+  required_bosses: none
+  shuffle_structures: 'true'
+  structure_compasses: 'true'
+  combat_difficulty: normal
+  include_hard_advancements: 'false'
+  include_unreasonable_advancements: 'false'
+  include_postgame_advancements: 'false'
+  bee_traps: 0
+  send_defeated_mobs: 'true'
+  death_link: 'false'
+  exclude_locations:
+   - 'Beaconator'
+   - 'Subspace Bubble'
+   - 'Feels like home'
+   - 'Two Birds, One Arrow'
+   - 'Very Very Frightening'
+   - 'Is It a Plane?'
+   - 'Postmortal'
+   - 'Bring Home the Beacon'
+   - 'Great View From Up Here'
+   - 'Star Trader'
+   - 'Remote Getaway'
+   - 'Bullseye'
+   - 'Birthday Song'
+   - 'Caves & Cliffs'
+   - 'The End... Again...'
+   - 'Total Beelocation'
+   - 'Cover Me in Debris'
+
+Donkey Kong Country 3:
+  progression_balancing: 50
+  accessibility: items
+  goal: banana_bird_hunt
+  dk_coins_for_gyrocopter: 30
+  krematoa_bonus_coin_cost: 10
+  percentage_of_extra_bonus_coins: 100
+  number_of_banana_birds: 15
+  percentage_of_banana_birds: 67
+  kongsanity: 'false'
+  level_shuffle: 'true'
+  difficulty: norml
+  autosave: 'true'
+  merry: 'false'
+  music_shuffle: 'false'
+  kong_palette_swap: purple
+  starting_life_count: 5
+  exclude_locations:
+   - 'Rocket Rush - DK Coin'
+   - 'Rocket Rush - Flag'
+   - 'Knautilus'
+
+Super Mario World:
+  progression_balancing: 50
+  accessibility: items
+  death_link: 'false'
+  goal: bowser
+  bosses_required: 5
+  max_yoshi_egg_cap: 30
+  percentage_of_yoshi_eggs: 50
+  dragon_coin_checks: 'false'
+  moon_checks: 'false'
+  hidden_1up_checks: 'false'
+  bonus_block_checks: 'false'
+  blocksanity: 'false'
+  bowser_castle_doors: vanilla
+  bowser_castle_rooms: random_two_room
+  level_shuffle: 'true'
+  exclude_special_zone: 'true'
+  boss_shuffle: simple
+  swap_donut_gh_exits: 'false'
+  display_received_item_popups: progression
+  junk_fill_percentage: 0
+  trap_fill_percentage: 0
+  ice_trap_weight: medium
+  stun_trap_weight: medium
+  literature_trap_weight: medium
+  timer_trap_weight: medium
+  reverse_trap_weight: medium
+  thwimp_trap_weight: medium
+  autosave: 'true'
+  early_climb: 'true'
+  overworld_speed: fast
+  music_shuffle: full
+  sfx_shuffle: none
+  mario_palette: random
+  level_palette_shuffle: on_curated
+  overworld_palette_shuffle: on_curated
+  starting_life_count: 5
+
+A Short Hike:
+  progression_balancing: 50
+  accessibility: locations
+  goal:
+    nap: 0
+    photo: 5
+    races: 0
+    help_everyone: 95
+    fishmonger: 0
+  show_golden_chests: true
+  skip_cutscenes: true
+  coins_in_shops: false
+  golden_feathers: 20
+  silver_feathers: 3
+  buckets: 2
+  golden_feather_progression: Easy
+  cost_multiplier: 100
+  filler_coin_amount: random
+
+Kirby's Dream Land 3:
+  progression_balancing: 50
+  accessibility: items
+  death_link: 'false'
+  game_language: english
+  goal: zero
+  goal_speed: fast
+  total_heart_stars: 30
+  heart_stars_required: 50
+  filler_percentage: 50
+  trap_percentage: 50
+  gooey_trap_weight: 50
+  slow_trap_weight: 50
+  ability_trap_weight: 50
+  jumping_target: 10
+  stage_shuffle: shuffled
+  boss_shuffle: shuffled
+  allow_bb: enabled
+  animal_randomization: disabled
+  copy_ability_randomization: disabled
+  strict_bosses: 'false'
+  open_world: 'true'
+  ow_boss_requirement: 3
+  boss_requirement_random: 'true'
+  consumables: 'false'
+  starsanity: 'false'
+  gifting: 'true'
+  kirby_flavor_preset: random
+  gooey_flavor_preset: random
+  music_shuffle: full
+  virtual_console: flash_reduction
+
+Lingo:
+  progression_balancing: 50
+  accessibility: items
+  shuffle_doors: simple
+  progressive_orange_tower: 'false'
+  progressive_colorful: 'false'
+  location_checks: insanity
+  shuffle_colors: 'true'
+  shuffle_panels: rearrange
+  shuffle_paintings: 'false'
+  enable_pilgrimage: 'false'
+  pilgrimage_allows_roof_access: 'true'
+  pilgrimage_allows_paintings: 'true'
+  sunwarp_access: normal
+  shuffle_sunwarps: 'false'
+  victory_condition: the_master
+  mastery_achievements: 20
+  level_2_requirement: 223
+  early_color_hallways: 'true'
+  trap_percentage: 20
+  puzzle_skip_percentage: 20
+  death_link: 'false'
+  local_items: ["Wanderlust", "The Feeling of Being Lost"]	
+
+triggers:
+  - option_name: game
+    option_result: Super Mario 64
+    option_category: null
+    options:
+     null:  
+      name: Vegetable
+  - option_name: game
+    option_result: Minecraft
+    option_category: null
+    options:
+     null:  
+      name: Vegetable
+  - option_name: game
+    option_result: Donkey Kong Country 3
+    option_category: null
+    options:
+     null:  
+      name: Vegetable
+  - option_name: game
+    option_result: Super Mario World
+    option_category: null
+    options:
+     null:  
+      name: Vegetable
+  - option_name: game
+    option_result: A Short Hike
+    option_category: null
+    options:
+     null:  
+      name: Vegetable
+  - option_name: game
+    option_result: Kirby's Dream Land 3
+    option_category: null
+    options:
+     null:  
+      name: Vegetable
+  - option_name: game
+    option_result: Lingo
+    option_category: null
+    options:
+     null:  
+      name: Vegetab;e
+

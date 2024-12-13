@@ -1,0 +1,364 @@
+name: Honour
+requires:
+  plando: items
+  plando_items:
+    - items:
+        Celestial Sash: 1
+      locations:
+        - early_locations
+      from_pool: true
+      world: true 
+      force: true 
+game:
+  A Link to the Past: 3
+  Hollow Knight: 0
+  Timespinner: 3
+A Link to the Past:
+  progression_balancing: '50'
+  accessibility: items
+  goal: pedestal
+  mode: open
+  glitches_required: no_glitches
+  dark_room_logic: lamp
+  open_pyramid: goal
+  triforce_pieces_mode: available
+  triforce_pieces_percentage: '150'
+  triforce_pieces_required: '20'
+  triforce_pieces_available: '30'
+  triforce_pieces_extra: '10'
+  entrance_shuffle_seed: random
+  big_key_shuffle: any_world
+  key_drop_shuffle: 'true'
+  restrict_dungeon_item_on_boss: 'false'
+  item_pool: normal
+  item_functionality: normal
+  enemy_health: easy
+  enemy_damage: default
+  progressive: 'on'
+  swordless: 'false'
+  dungeon_counters: 'on'
+  retro_bow: 'false'
+  retro_caves: 'false'
+  hints: full
+  scams: 'off'
+  boss_shuffle: Arrghus
+  pot_shuffle: 'false'
+  enemy_shuffle: 'false'
+  killable_thieves: 'true'
+  bush_shuffle: 'false'
+  shop_item_slots: '30'
+  shuffle_capacity_upgrades: on_combined
+  bombless_start: 'false'
+  shuffle_prizes: general
+  tile_shuffle: 'false'
+  glitch_boots: 'true'
+  beemizer_total_chance: '0'
+  beemizer_trap_chance: '60'
+  timer: none
+  countdown_start_time: '10'
+  red_clock_time: '-2'
+  blue_clock_time: '2'
+  green_clock_time: '4'
+  death_link: 'false'
+  allow_collect: 'true'
+  ow_palettes: default
+  uw_palettes: default
+  hud_palettes: default
+  sword_palettes: default
+  shield_palettes: default
+  heartbeep: normal
+  heartcolor: red
+  quickswap: 'true'
+  menuspeed: normal
+  music: 'true'
+  reduceflashing: 'true'
+  triforcehud: normal
+  start_inventory:
+    Rupees (300): 10
+    Pegasus Boots: 1
+    Bombs (10): 1
+  crystals_needed_for_gt: random
+  crystals_needed_for_ganon: random
+  misery_mire_medallion: random
+  turtle_rock_medallion: random
+Hollow Knight:
+  progression_balancing: 0
+  accessibility: minimal
+  RandomizeDreamers: random
+  RandomizeSkills: 'true'
+  RandomizeFocus: random
+  RandomizeSwim: random
+  RandomizeCharms: random
+  RandomizeKeys: 'true'
+  RandomizeMaskShards: random
+  RandomizeVesselFragments: random
+  RandomizeCharmNotches: random
+  RandomizePaleOre: random
+  RandomizeGeoChests: random
+  RandomizeJunkPitChests: random
+  RandomizeRancidEggs: random
+  RandomizeRelics: random
+  RandomizeWhisperingRoots: random
+  RandomizeBossEssence: 'true'
+  RandomizeGrubs: 'true'
+  RandomizeMimics: random
+  RandomizeMaps: random
+  RandomizeStags: random
+  RandomizeLifebloodCocoons: random
+  RandomizeGrimmkinFlames: random
+  RandomizeJournalEntries: random
+  RandomizeNail: random
+  RandomizeGeoRocks: random
+  RandomizeBossGeo: 'true'
+  RandomizeSoulTotems: random
+  RandomizeLoreTablets: random
+  RandomizeElevatorPass: 'true'
+  PreciseMovement: 'false'
+  ProficientCombat: random
+  BackgroundObjectPogos: 'false'
+  EnemyPogos: 'false'
+  ObscureSkips: 'false'
+  ShadeSkips: 'false'
+  InfectionSkips: 'false'
+  FireballSkips: 'false'
+  SpikeTunnels: 'false'
+  AcidSkips: 'false'
+  DamageBoosts: 'false'
+  DangerousSkips: 'false'
+  DarkRooms: 'false'
+  ComplexSkips: 'false'
+  DifficultSkips: 'false'
+  RemoveSpellUpgrades: "false"
+  Goal: any
+  WhitePalace: exclude
+  ExtraPlatforms: 'true'
+  AddUnshuffledLocations: 'false'
+  StartingGeo: random
+  DeathLink: 'true'
+  DeathLinkShade: shade
+  DeathLinkBreaksFragileCharms: 'true'
+  MinimumGeoPrice: random
+  MaximumGeoPrice: '50'
+  MinimumGrubPrice: random
+  MaximumGrubPrice: random
+  MinimumEssencePrice: random
+  MaximumEssencePrice: random
+  MinimumCharmPrice: random
+  MaximumCharmPrice: random
+  RandomCharmCosts: random
+  MinimumEggPrice: random
+  MaximumEggPrice: random
+  EggShopSlots: random
+  SlyShopSlots: random
+  SlyKeyShopSlots: random
+  IseldaShopSlots: random
+  SalubraShopSlots: random
+  SalubraCharmShopSlots: random
+  LegEaterShopSlots: random
+  GrubfatherRewardSlots: random
+  SeerRewardSlots: random
+  ExtraShopSlots: random
+  exclude_locations:
+    - Grub-Queen's_Gardens_Top
+    - Mask_Shard-Grey_Mourner
+    - Simple_Key-Lurker
+  priority_locations:
+    - Monomon
+    - Lurien
+    - Herrah
+    - World_Sense
+    - Queen_Fragment
+    - Void_Heart
+    - Pale_Ore-Colosseum
+    - Charm_Notch-Colosseum
+    - Mask_Shard-Bretta
+    - Boss_Essence-Grey_Prince_Zote
+  start_hints:
+    - Dreamers
+    - WhiteFragments
+  local_items:
+    - GeoRocks
+    - LoreTablets
+    - SoulTotems
+    - Dreamers
+    - WhiteFragments
+Timespinner:
+  progression_balancing:
+    50: 1
+  accessibility:
+    items: 50
+  start_inventory:
+    Galaxy Earrings: 1
+  DownloadableItems:
+    true: 50
+  EyeSpy:
+    false: 50
+  StartWithMeyef:
+    false: 50
+  QuickSeed:
+    true: 10
+  SpecificKeycards:
+    false: 1
+    true: 10
+  Inverted:
+    false: 50
+    true: 10
+  GyreArchives:
+    true: 10
+  Cantoran:
+    true: 10
+  LoreChecks:
+    true: 1
+  BossRando:
+    scaled: 10
+  EnemyRando:
+    scaled: 1
+  DamageRando:
+    manual: 1
+  DamageRandoOverrides:
+    Blade:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Blood:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Blue:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Empire:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Eye:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Fire:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    ForbiddenTome:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Gun:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Ice:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Iron:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Nether:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Plasma:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Radiant:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Shattered:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Umbra:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+    Wind:
+      MinusOdds: 1
+      NormalOdds: 1
+      PlusOdds: 1
+  HpCap:
+    999: 50
+  LevelCap:
+    99: 50
+  ExtraEarringsXP:
+    24: 50
+  BossHealing:
+    true: 50
+  ShopFill:
+    randomized: 10
+  LootPool:
+    randomized: 10
+  DropRateCategory:
+    randomized: 10
+  FixedDropRate:
+    100: 50
+  LootTierDistro:
+    default_weight: 50
+  EnterSandman:
+    false: 50
+    true: 50
+  DadPercent:
+    false: 50
+    true: 50
+  RisingTides:
+    true: 50
+  RisingTidesOverrides:
+    AncientPyramidShaft:
+      Dry: 33
+      Flooded: 33
+    CastleBasement:
+      Dry: 17
+      Flooded: 17
+      FloodedWithSavePointAvailable: 17
+    CastleCourtyard:
+      Dry: 33
+      Flooded: 33
+    CastleMoat:
+      Dry: 33
+      Flooded: 33
+    Lab:
+      Dry: 33
+      Flooded: 33
+    LakeDesolation:
+      Dry: 33
+      Flooded: 33
+    LakeSerene:
+      Dry: 33
+      Flooded: 33
+    LakeSereneBridge:
+      Dry: 33
+      Flooded: 33
+    Maw:
+      Dry: 33
+      Flooded: 33
+    Sandman:
+      Dry: 33
+      Flooded: 33
+    Xarion:
+      Dry: 33
+      Flooded: 33
+  UnchainedKeys:
+    false: 50
+    true: 50
+  PresentAccessWithWheelAndSpindle:
+    true: 10
+  start_hints:
+    ["Celestial Sash","Water Mask","Modern Warp Beacon","Timeworn Warp Beacon","Twin Pyramid Key","Mysterious Warp Beacon"]
+---
+name: ConnorButton
+game: Clique
+Clique:
+  progression_balancing: '0'
+  accessibility: items
+  hard_mode: 'true'
+  priority_locations:
+  - The Big Red Button
+  - The Item on the Desk
+  start_inventory: {}
+  color: random
+
+  

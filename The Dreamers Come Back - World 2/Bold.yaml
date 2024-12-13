@@ -1,0 +1,237 @@
+game:
+  #Supported
+  Timespinner: 1
+  Muse Dash: 0
+  A Short Hike: 0
+  TUNIC: 1
+  Risk of Rain 2: 0
+  Celeste 64: 1
+  #Unsupported
+  Celeste: 1
+  osu!: 1
+  Yacht Dice: 1
+
+name: Bold
+
+Timespinner:
+  progression_balancing: 50
+  accessibility: items
+  StartWithJewelryBox: 'true'
+  DownloadableItems: 'true'
+  EyeSpy: 'true'
+  StartWithMeyef: 'false'
+  QuickSeed: 'true'
+  SpecificKeycards: 'true'
+  Inverted: 'random'
+  GyreArchives: 'true'
+  Cantoran: 'true'
+  LoreChecks: 'true'
+  BossRando: off
+  EnemyRando: off
+  DamageRando: on
+  HpCap: 999
+  LevelCap: 99
+  ExtraEarringsXP: 0
+  BossHealing: 'true'
+  ShopFill: randomized
+  ShopWarpShards: 'true'
+  ShopMultiplier: 1
+  LootPool: randomized
+  DropRateCategory: tiered
+  FixedDropRate: 5
+  LootTierDistro: default_weight
+  ShowBestiary: 'true'
+  ShowDrops: 'false'
+  EnterSandman: 'true'
+  DadPercent: 'false'
+  RisingTides: 'false'
+  UnchainedKeys: 'true'
+  TrapChance: 5
+  Traps:
+    - Meteor Sparrow Trap
+    - Poison Trap
+    - Chaos Trap
+    - Neurotoxin Trap
+    - Bee Trap
+  PresentAccessWithWheelAndSpindle: 'true'
+  DeathLink: 'false'
+
+Muse Dash:
+  progression_balancing: '50'
+  accessibility: items
+  dlc_packs:
+  - Muse Plus
+  - CHUNITHM COURSE MUSE
+  - maimai DX Limited-time Suite
+  - MSR Anthology
+  - Miku in Museland
+  - Rin Len's Mirrorland
+  streamer_mode_enabled: 'false'
+  starting_song_count: '3'
+  additional_song_count: '30'
+  song_difficulty_mode: manual
+  song_difficulty_min: '8'
+  song_difficulty_max: '9'
+  grade_needed: any
+  music_sheet_count_percentage: '20'
+  music_sheet_win_count_percentage: '80'
+  chosen_traps: vfx
+  trap_count_percentage: '10'
+  death_link: 'false'
+  start_inventory: {}
+
+A Short Hike:
+  progression_balancing: '50'
+  accessibility: items
+  goal: help_everyone
+  filler_coin_amount: 13_coins
+  random_walkie_talkie: 'false'
+  golden_feather_progression: normal
+  easier_races: 'false'
+  golden_feathers: '20'
+  silver_feathers: '2'
+  buckets: '1'
+  sticks: '1'
+  toy_shovels: '1'
+  coins_in_shops: 'true'
+  cost_multiplier: '50'
+  shop_check_logic: fishing_rod
+  min_shop_check_logic: 100_coins
+  start_inventory: {}
+  start_inventory_from_pool: {}
+
+TUNIC:
+  progression_balancing: 50
+  accessibility: items
+  sword_progression: 'true'
+  start_with_sword: 'true'
+  keys_behind_bosses: 'false'
+  ability_shuffling: 'true'
+  shuffle_ladders: 'false'
+  entrance_rando: no
+  fixed_shop: 'false'
+  logic_rules: restricted
+  fool_traps: normal
+  hexagon_quest: 'true'
+  hexagon_goal: 16
+  extra_hexagon_percentage: 30
+  lanternless: 'false'
+  maskless: 'false'
+  laurels_location: anywhere
+  start_inventory:
+    Firecracker x5: 5
+    Dath Stone: 1
+    Hero's Laurels: 1
+
+Risk of Rain 2:
+  progression_balancing: '50'
+  accessibility: items
+  goal: explore
+  victory: mithrix
+  total_locations: '40'
+  chests_per_stage: '8'
+  shrines_per_stage: '2'
+  scavengers_per_stage: '0'
+  scanner_per_stage: '0'
+  altars_per_stage: '0'
+  total_revivals: '2'
+  start_with_revive: 'false'
+  final_stage_death: 'false'
+  dlc_sotv: 'true'
+  require_stages: 'true'
+  progressive_stages: 'true'
+  death_link: 'false'
+  item_pickup_step: '0'
+  shrine_use_step: '0'
+  enable_trap: 'true'
+  enable_lunar: 'true'
+  item_weights: new
+  item_pool_presets: 'false'
+  green_scrap: '16'
+  red_scrap: '4'
+  yellow_scrap: '1'
+  white_scrap: '32'
+  common_item: '64'
+  uncommon_item: '32'
+  legendary_item: '8'
+  boss_item: '4'
+  lunar_item: '16'
+  void_item: '16'
+  equipment: '32'
+  money: '64'
+  lunar_coin: '20'
+  experience: '40'
+  mountain_trap: '5'
+  time_warp_trap: '20'
+  combat_trap: '20'
+  teleport_trap: '20'
+  start_inventory: {}
+
+Celeste:
+  progression_balancing: 50
+  accessibility: locations
+  berries_required: 50
+  cassettes_required: 2
+  levels_required: 6
+  hearts_required: 6
+  victory_condition: chapter_7_summit
+
+osu!:
+  progression_balancing: normal
+  accessibility: items
+  starting_songs: 3
+  additional_songs: 30
+  additional_item_percentage: 100
+  disable_difficulty_reduction: 'false'
+  maximum_length: 180
+  exclude_standard: 'false'
+  minimum_difficulty_standard: 0
+  maximum_difficulty_standard: 400
+  exclude_catch: 'true'
+  exclude_taiko: 'true'
+  exclude_4k: 'true'
+  exclude_7k: 'true'
+  exclude_other_keys: 'true'
+  performance_points_count_percentage: '20'
+  performance_points_win_count_percentage: '80'
+  explicit_lyrics: 'false'
+  enable_loved: 'false'
+
+Yacht Dice:
+  progression_balancing: normal
+  accessibility: items
+  game_difficulty: medium
+  score_for_last_check: random
+  score_for_goal: random
+  minimal_number_of_dice_and_rolls: 5_dice_and_3_rolls
+  number_of_dice_fragments_per_dice: 4
+  number_of_roll_fragments_per_roll: 4
+  alternative_categories: random
+  allow_manual_input: yes_allow
+  weight_of_dice: 5
+  weight_of_roll: 20
+  weight_of_fixed_score_multiplier: 30
+  weight_of_step_score_multiplier: 0
+  weight_of_double_category: 50
+  weight_of_points: 20
+  points_size: medium
+  minimize_extra_items: no_dont
+  add_bonus_points: all_of_it
+  add_story_chapters: never
+  which_story: random_story
+
+Celeste 64:
+  progression_balancing: '50'
+  accessibility: items
+  death_link: 'false'
+  death_link_amnesty: '10'
+  logic_difficulty: standard
+  move_shuffle: 'true'
+  total_strawberries: '25'
+  strawberries_required_percentage: '80'
+  friendsanity: 'true'
+  signsanity: 'true'
+  carsanity: 'true'
+  badeline_chaser_source: locations
+  badeline_chaser_frequency: '0'
+  badeline_chaser_speed: '3'

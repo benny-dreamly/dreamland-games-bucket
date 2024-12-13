@@ -1,0 +1,398 @@
+name: Sigh
+game:
+  Minecraft: 0
+  Undertale: 1
+  Celeste: 1
+  ULTRAKILL: 0
+
+
+requires:
+  version: 0.5.0 # Version of Archipelago required for this yaml to work as expected.
+
+Undertale:
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # Locations: ensure everything can be reached and acquired.
+    # Items: ensure all logically relevant items can be acquired.
+    # Minimal: ensure what is needed to reach your goal can be acquired.
+    locations: 0
+    items: 50
+    minimal: 0
+
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the !hint command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the !hint command
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
+
+  route_required:
+    # Main route of the game required to win.
+    neutral: 0
+    pacifist: 0
+    genocide: 1
+    all_routes: 0
+
+  starting_area:
+    # Which area to start with access to.
+    ruins: 1
+    snowdin: 1
+    waterfall: 1
+    hotland: 1
+    core: 1
+
+  key_hunt:
+    # Adds Key Pieces to the item pool, you need all of them to enter the last corridor.
+    false: 50
+    true: 0
+
+  key_pieces:
+    # How many Key Pieces are added to the pool, only matters with Key Piece Hunt enabled.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 10
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  rando_love:
+    # Adds LOVE to the pool. Only matters if your goal includes Genocide route
+    false: 0
+    true: 50
+
+  rando_stats:
+    # Makes each stat increase from LV a separate item. Only matters if your goal includes Genocide route
+    # Warning: This tends to spam chat with sending out checks.
+    false: 0
+    true: 50
+
+  temy_include:
+    # Adds Temmy Armor to the item pool.
+    false: 0
+    true: 50
+
+  no_equips:
+    # Removes all equippable items.
+    false: 50
+    true: 0
+
+  only_flakes:
+    # Replaces all non-required items, except equipment, with Temmie Flakes.
+    false: 50
+    true: 0
+
+  prog_armor:
+    # Makes the armor progressive.
+    false: 50
+    true: 0
+
+  prog_weapons:
+    # Makes the weapons progressive.
+    false: 50
+    true: 0
+
+  rando_item_button:
+    # Turns the ITEM button in battle into an item you have to receive.
+    false: 0
+    true: 50
+
+
+#Feel free to read this file! Ive detailed how the settings effect the run!
+
+ULTRAKILL:
+  goal: "P_2" 
+  # Hardest level as goal
+
+  goal_requirement: 28
+  # Maximum level requirement
+
+  include_secret_mission_completion: False
+  # i am not doing that shit bro
+
+  unlock_type: levels
+  trap_percent: 0
+
+  boss_rewards: extended
+  # Secret/main bosses in 0-3, 0-5, 1-2, 1-4, 2-4, 3-2, 4-3, 4-4, 5-4, 6-2, 7-1, and 7-4
+
+  challenge_rewards: true
+  # Challenges are extra things to do in a level, such as fighting a secret encounter, or using a level-specific gimmick. Adds 1 check per level.
+
+  p_rank_rewards: true
+  # Adds 1 check per level. Requires no deaths and a S rank in time, kills, and style.
+
+  hank_rewards: true
+  # Checks from building Hank and Hank Junior in 1-4 and 5-3. The name is derived from the textbox that appears.
+
+  randomize_clash_mode: false
+  # I really dont want to play crash bandicoot for 30 minutes for this.
+
+  fish_rewards: true
+  # FISHING!!!!!
+
+  cleaning_rewards: true
+  # Rewards for each room in the powerwashing simulator level 7-S
+  
+  chess_reward: false
+  # im not playing chess in the credits museum for this
+  
+  rocket_race_reward: false
+  # requires the rocket launcher, testing for the first time.
+  
+  starting_weapon: any_weapon
+  # Randomized starting weapon. God forbid its a railcannon.
+  
+  randomize_secondary_fire: true
+  # Locks the ability to use a weapon's alternate fire behind items that must be found in the multiworld.
+  
+  start_with_arm: false
+  # Gives the feedbacker arm to start, like the basegame. This allows parrying and reflecting projectiles.
+  
+  starting_stamina: 0
+  # Start with 1/3 stamina bars.
+  
+  starting_walljumps: 0
+  # Starting with 1/3 wall jumps. Allows for insane movement still with Slam Storage.
+  
+  start_with_slide: false
+  # Choose whether or not to start the game with the ability to slide.
+  
+  start_with_slam: false
+  # Choose whether or not to start the game with the ability to slam.
+  
+  revolver_form: alternate
+  shotgun_form: standard
+  nailgun_form: alternate
+  # Standard / Alternate, chooses between the default firing mode for said weapon.
+  # which are normally unlocked in secrets.
+  
+  randomize_skulls: true
+  # This adds ~35 new required checks in total. Spawns red and blue skulls in levels. 
+  # Each skull for each level must be unlocked.
+  
+  randomize_limbo_switches: true
+  # Creates 4 checks, one for each level of Limbo.
+  
+  randomize_violence_switches: true
+  # Randomizes the three switches in 7-2.
+  
+  point_multiplier: 2
+  #Money multiplier.
+  
+  ui_color_randomizer: disabled
+  gun_color_randomizer: disabled
+  music_randomizer: true
+  
+  cybergrind_hints: true
+  # Endless mode gives hints every 5 waves.
+  
+  death_link: false
+  progression_balancing: 50
+  accessibility: items
+
+
+
+Celeste:
+  progression_balancing: 50
+  accessibility: locations
+  berries_required: 80
+  cassettes_required: 4
+  levels_required: 4
+  hearts_required: 8
+  victory_condition: chapter_7_summit
+  progression_system: default_progression
+
+
+Minecraft:
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # Locations: ensure everything can be reached and acquired.
+    # Items: ensure all logically relevant items can be acquired.
+    # Minimal: ensure what is needed to reach your goal can be acquired.
+    locations: 0
+    items: 50
+    minimal: 0
+
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the !hint command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the !hint command
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
+
+  advancement_goal:
+    # Number of advancements required to spawn bosses.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 114
+    40: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  egg_shards_required:
+    # Number of dragon egg shards to collect to spawn bosses.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  egg_shards_available:
+    # Number of dragon egg shards available to collect.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  required_bosses:
+    # Bosses which must be defeated to finish the game.
+    none: 0
+    ender_dragon: 0
+    wither: 0
+    both: 50
+
+  shuffle_structures:
+    # Enables shuffling of villages, outposts, fortresses, bastions, and end cities.
+    false: 0
+    true: 50
+
+  structure_compasses:
+    # Adds structure compasses to the item pool, which point to the nearest indicated structure.
+    false: 0
+    true: 50
+
+  combat_difficulty:
+    # Modifies the level of items logically required for exploring dangerous areas and fighting bosses.
+    easy: 0
+    normal: 50
+    hard: 0
+
+  include_hard_advancements:
+    # Enables certain RNG-reliant or tedious advancements.
+    false: 50
+    true: 0
+
+  include_unreasonable_advancements:
+    # Enables the extremely difficult advancements "How Did We Get Here?" and "Adventuring Time."
+    false: 50
+    true: 0
+
+  include_postgame_advancements:
+    # Enables advancements that require spawning and defeating the required bosses.
+    false: 50
+    true: 0
+
+  bee_traps:
+    # Replaces a percentage of junk items with bee traps, which spawn multiple angered bees around every player when
+    # received.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  send_defeated_mobs:
+    # Send killed mobs to other Minecraft worlds which have this option enabled.
+    false: 50
+    true: 0
+
+  death_link:
+    # When you die, everyone dies. Of course the reverse is true too.
+    false: 0
+    true: 50
+
+  starting_items:
+    # Start with these items. Each entry should be of this format: {item: "item_name", amount: #, nbt: "nbt_string"}
+    [item:"Porkchop", amount: 64]
