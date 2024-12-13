@@ -1,0 +1,15 @@
+name: Attic
+game: A Link to the Past
+
+A Link to the Past:
+  glitches_required: no_logic
+  dark_room_logic: lamp
+  open_pyramid: goal
+  crystals_needed_for_gt: '7'
+  crystals_needed_for_ganon: '7'
+  big_key_shuffle: any_world
+  small_key_shuffle: any_world
+  key_drop_shuffle: 'false'
+  compass_shuffle: any_world
+  map_shuffle: any_world
+  allow_collect: 'false'

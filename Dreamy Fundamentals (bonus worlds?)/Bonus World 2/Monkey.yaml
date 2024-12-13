@@ -1,0 +1,980 @@
+#                         _-------..._
+#                        -            "".         __..-----..
+#                       /                '-----"""           \
+#                    __/    ___---"""""""""-----__            |
+#                  /" __--""                      ""--__      |
+#                _/-""                                  "-_   |
+#             _-'                                          "-_ \_
+#           ."                                                "./
+#         ."                                                    ".
+#        /                   |                                    \
+#       /                   |                                      \
+#     /"           |       /               .                  |     \
+#    /             |      /|              / |   |             |      |
+#   | |           /      /|           |  |  |   |             |      |
+#   | |     |    /|\   _|_| |         |_ |  |   |             |       |
+#  | /      |   | ||"""|  | |        /| |"-_|_ |\            |        |
+#  |||     |   |  ||  |  | || |     |/| |    | | |   |       |        |
+# | ||     /|  /  |\  |  | || |     / |/     | |  | |        |        |
+# || |    |  \|   | \/    | || |   /  |      | |  | |        |        |
+# || ||   /| |/_____|__   | || |  |   |      |/   | |       |        |
+# |  ||  | | /"""#"""###     \  \ |   _______|     |        |        |
+# | | |  | | .  //     \\        |    :""#""###.._ |        |        |
+#   |/ \/  | . ||  \/   |            .  //   ""##\/        /        |
+#  /    |  |  . \_    _/             . |/        # .      |      /  |
+#       |  |    ' """"                . \  '-'  / /       |     |  |
+#       |  |   / / /       '            '''----'//       |      |  |
+#       |  |                                  // /       |      |  |
+#       |  |                             / / // / /     /|      | |
+#       |   \                      .           | /     / |      | |
+#       |    \_            _    _-'            |/     /  |      | |
+#       |      |.           '  '              //     /   |       |
+#       |      | ""_                         //     |    |       |
+#       |     | | | ""-_                 __-""/     |     |       |
+#       |     | |  |    ""=_      ___--""    /     /   \  |       |
+#      |      | |  |  _-"/" "/"""\          /     / \   \  |       |
+#      |      |  \  \/  /   /    _\        /     | _.\   '.|       |
+#      |      |   \ /  |   |    /  \      /      |"   ".    \       \
+#     |       |    |   |   |   /   '     /      /       "..  \       \
+
+name: Monkey
+
+description: Let's play a vidya game
+
+game: A Link to the Past
+
+requires:
+  version: 0.5.0 # Version of Archipelago required for this yaml to work as expected.
+
+Global:
+  death_link: false
+
+triggers:
+  # All
+  # Death link enabling
+  - option_category: Global
+    option_name: death_link
+    option_result: true
+    options:
+      A Link to the Past:
+        death_link: true
+      Ocarina of Time:
+        death_link: true
+      Super Mario 64:
+        death_link: true
+      Super Mario World:
+        death_link: true
+      Super Metroid:
+          death_link:
+            enable: 1
+            enable_survive: 2
+      Wario Land 4:
+        death_link: true
+      Metroid Zero Mission:
+        death_link: true
+      Metroid Prime:
+        death_link: true
+  
+  # A Link to the Past
+  # Crystal requirements by goal
+  # Bosses: always 7 crystals
+  # Crystals: GT always 7, Ganon 5 or 7
+  # Ganon: 5 or 7 crystals, GT == Ganon
+  - option_category: A Link to the Past
+    option_name: goal
+    option_result: crystals
+    options:
+      A Link to the Past:
+        crystals_needed_for_ganon:
+          5: 1
+          7: 4
+  - option_category: A Link to the Past
+    option_name: goal
+    option_result: ganon
+    options:
+      A Link to the Past:
+        crystals_needed:
+          5: 1
+          7: 3
+  - option_category: A Link to the Past
+    option_name: crystals_needed
+    option_result: 5
+    options:
+      A Link to the Past:
+        crystals_needed_for_gt: 5
+        crystals_needed_for_ganon: 5
+  - option_category: A Link to the Past
+    option_name: crystals_needed
+    option_result: 7
+    options:
+      A Link to the Past:
+        crystals_needed_for_gt: 7
+        crystals_needed_for_ganon: 7
+  # Match keysanity options
+  - option_category: A Link to the Past
+    option_name: small_key_shuffle
+    option_result: own_world
+    options:
+      A Link to the Past:
+        big_key_shuffle: own_world
+        compass_shuffle: own_world
+        map_shuffle: own_world
+  - option_category: A Link to the Past
+    option_name: small_key_shuffle
+    option_result: any_world
+    options:
+      A Link to the Past:
+        big_key_shuffle: any_world
+        compass_shuffle: any_world
+        map_shuffle: any_world
+
+  # Ocarina of Time
+  # If rainbow bridge is vanilla, place Ganon's boss key on medallions or rewards with same weights
+  - option_category: Ocarina of Time
+    option_name: bridge
+    option_result: vanilla
+    options:
+      Ocarina of Time:
+        shuffle_ganon_bosskey:
+          medallions: 1
+          dungeons: 2
+  # Reduce some randomness for QoL if songs are shuffled
+  - option_category: Ocarina of Time
+    option_name: shuffle_song_items
+    option_result: any
+    options:
+      Ocarina of Time:
+        shuffle_ocarinas: false
+        shuffle_frog_song_rupees: false
+        start_inventory:
+          Prelude of Light: 1
+          Serenade of Water: 1
+  # Group Navi and menu sounds
+  - option_category: Ocarina of Time
+    option_name:  sfx_navi_overworld
+    option_result: default
+    options:
+      Ocarina of Time:
+        sfx_navi_enemy: default
+  - option_category: Ocarina of Time
+    option_name:  sfx_menu_cursor
+    option_result: default
+    options:
+      Ocarina of Time:
+        sfx_menu_select: default
+
+  # Super Metroid
+  # Use vanilla amounts if using exact counts
+  - option_category: Super Metroid
+    option_name: strict_minors
+    option_result: true
+    options:
+      Super Metroid:
+        missile_qty: 23
+        super_qty: 5
+        power_bomb_qty: 5
+  
+  # SMZ3
+  # 5 crystal Ganon forces 5 crystal GT
+  - option_category: SMZ3
+    option_name: ganon_vulnerable
+    option_result: true
+    options:
+      SMZ3:
+        open_tower: 5
+  # Metroid Prime
+  # Remove starting Charge Beam if beams are progressive
+  - option_category: Metroid Prime
+    option_name: progressive_beam_upgrades
+    option_result: true
+    options:
+      Metroid Prime:
+        start_inventory: {}
+
+A Link to the Past:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+  goal:
+    crystals: 4
+    ganon: 7
+  mode:
+    open: 11
+  glitches_required: no_glitches
+  dark_room_logic: lamp
+  open_pyramid: goal
+  crystals_needed_for_gt: 7
+  crystals_needed_for_ganon: 7
+  entrance_shuffle: vanilla
+  key_drop_shuffle: false
+  small_key_shuffle: original_dungeon
+  big_key_shuffle: original_dungeon
+  compass_shuffle: original_dungeon
+  map_shuffle: original_dungeon
+  restrict_dungeon_item_on_boss: false
+  item_pool: normal
+  item_functionality: normal
+  enemy_health: default
+  enemy_damage: default
+  progressive: on
+  dungeon_counters: default
+  retro_bow: false
+  retro_caves: false
+  hints: on
+  scams: all
+  boss_shuffle:
+    none: 6
+    basic: 2
+    full: 2
+  pot_shuffle: false
+  enemy_shuffle: false
+  killable_thieves: false
+  bush_shuffle: false
+  shop_item_slots: 0
+  randomize_shop_inventories: default
+  shuffle_shop_inventories: false
+  include_witch_hut: true
+  randomize_shop_prices: false
+  randomize_cost_types: false
+  shop_price_modifier: 50  # Reduced because scouting is impossible in most seeds
+  shuffle_capacity_upgrades:
+    off: 2
+    on_combined: 1
+  bombless_start:
+    'false': 7
+    'true': 1
+  shuffle_prizes: general
+  tile_shuffle:
+    false: 3
+    true: 1
+  misery_mire_medallion: random
+  turtle_rock_medallion: random
+  beemizer_total_chance: 0
+  timer: none
+  death_link: false
+  allow_collect: false
+  ow_palettes: default
+  uw_palettes: default
+  hud_palettes: default
+  sword_palettes: default
+  shield_palettes: default
+  heartbeep: quarter
+  heartcolor:
+    red: 1
+    blue: 1
+    green: 1
+    yellow: 1
+  quickswap: true
+  menuspeed: quadruple
+  music: true'
+  reduceflashing: true
+  sprite:
+    alex: 1
+    fierce-deity-link: 1
+    jack-frost: 1
+    kaguya: 1
+    link: 1
+    luigi: 45
+    link-redrawn: 2
+    minishcaplink: 1
+    neptune: 1
+    reverse-mails: 1
+    samus-sm: 1
+    totem-links: 1
+    two_faced: 1
+    yoshi: 2
+  # Item & Location Options
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints:
+    - Lumberjack Tree
+  exclude_locations:
+    - Ganons Tower
+    - Ganons Tower Climb
+  priority_locations: []
+  item_links: []
+  start_inventory_from_pool: {}
+
+Ocarina of Time:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+  death_link: false
+  logic_rules: glitchless
+  logic_no_night_tokens_without_suns_song: true
+  logic_tricks: []
+  # Open
+  open_forest:
+    open: 4
+    closed_deku: 1
+  open_kakariko: open
+  open_door_of_time: true
+  zora_fountain: closed
+  gerudo_fortress: fast
+  bridge:
+    vanilla: 3
+    medallions: 1
+    dungeons: 2
+  trials: 0
+  # World
+  starting_age:
+    child: 1
+    adult: 1
+  shuffle_interior_entrances: off
+  shuffle_grotto_entrances: false
+  shuffle_dungeon_entrances: off
+  shuffle_overworld_entrances: false'
+  owl_drops: false
+  warp_songs: false
+  spawn_positions: off
+  shuffle_bosses:
+    off: 5
+    full: 1
+  triforce_hunt: false
+  bombchus_in_logic: true
+  dungeon_shortcuts: off
+  mq_dungeons_mode: count
+  mq_dungeons_count:
+    0: 2
+    6: 1
+    random: 2
+    random-low: 1
+  bridge_medallions: 6
+  bridge_rewards: 6
+  # Shuffle
+  shuffle_song_items:
+    song: 5
+    any: 1
+  shopsanity: fixed_number
+  shop_slots: 4
+  shopsanity_prices: normal
+  tokensanity:
+    'off': 3
+    dungeons: 1
+  shuffle_scrubs:
+    off: 3
+    low: 2
+  shuffle_child_trade:
+    vanilla: 3
+    shuffle: 2
+  shuffle_freestanding_items: off
+  shuffle_pots: off
+  shuffle_crates: off
+  shuffle_cows: false
+  shuffle_beehives: false
+  shuffle_kokiri_sword: true
+  shuffle_ocarinas:
+    false: 3
+    true: 1
+  shuffle_gerudo_card: true
+  shuffle_beans:
+    false: 1
+    true: 1
+  shuffle_medigoron_carpet_salesman:
+    'false': 2
+    'true': 1
+  shuffle_frog_song_rupees:
+    'false': 5
+    'true': 1
+  # Dungeon Items
+  shuffle_mapcompass:
+    startwith: 1
+    dungeon: 3
+  shuffle_smallkeys: dungeon
+  shuffle_hideoutkeys: vanilla
+  shuffle_bosskeys: dungeon
+  enhance_map_compass: false
+  shuffle_ganon_bosskey:
+    vanilla: 3
+    dungeon: 1
+  ganon_bosskey_medallions: 6
+  ganon_bosskey_rewards: 6
+  key_rings: off
+  # Timesavers
+  no_escape_sequence: true
+  no_guard_stealth: true
+  no_epona_race: true
+  skip_some_minigame_phases: true
+  complete_mask_quest: true
+  useful_cutscenes: false
+  fast_chests: true
+  free_scarecrow: true
+  fast_bunny_hood: true
+  plant_beans: false
+  chicken_count: 1
+  big_poe_count: 1
+  fae_torch_count: 24
+  # Misc
+  correct_chest_appearances:
+    off: 3
+    textures: 1
+    both: 1
+    classic: 1
+  minor_items_as_major_chest: true
+  invisible_chests: false
+  hints: always
+  misc_hints: true
+  hint_dist: balanced
+  text_shuffle: none
+  damage_multiplier:
+    normal: 2
+    double: 1
+  deadly_bonks: none
+  no_collectible_hearts: false
+  starting_tod: default
+  blue_fire_arrows: true
+  fix_broken_drops: false
+  start_with_consumables: false
+  start_with_rupees: false
+  # Item Pool
+  item_pool_value: balanced
+  junk_ice_traps:
+    normal: 2
+    on: 1
+  ice_trap_appearance:
+    major_only: 3
+    anything: 2
+  adult_trade_start: claim_check
+  # Cosmetics
+  default_targeting: hold
+  display_dpad: true
+  dpad_dungeon_menu: true
+  correct_model_colors: true
+  background_music:
+    normal: 5
+    randomized: 3
+  fanfares: normal
+  ocarina_fanfares: false
+  kokiri_color: random_choice
+  goron_color: random_choice
+  zora_color: random_choice
+  silver_gauntlets_color: random_choice
+  golden_gauntlets_color: random_choice
+  mirror_shield_frame_color: random_choice
+  navi_color_default_inner:
+    random_choice: 5
+    white: 1
+  navi_color_default_outer: match_inner
+  navi_color_enemy_inner:
+    random_choice: 5
+    yellow: 1
+  navi_color_enemy_outer: match_inner
+  navi_color_npc_inner:
+    random_choice: 5
+    light_blue: 1
+  navi_color_npc_outer: match_inner
+  navi_color_prop_inner:
+    random_choice: 5
+    green: 1
+  navi_color_prop_outer: match_inner
+  sword_trail_duration: 4
+  sword_trail_color_inner:
+    rainbow: 1
+    white: 5
+  sword_trail_color_outer: match_inner
+  bombchu_trail_color_inner:
+    random_choice: 5
+    rainbow: 3
+    red: 2
+  bombchu_trail_color_outer: match_inner
+  boomerang_trail_color_inner: yellow
+  boomerang_trail_color_outer: match_inner
+  heart_color: random_choice
+  magic_color: random_choice
+  a_button_color:
+    random_choice: 75
+    n64_blue: 10
+    gamecube_green: 15
+  b_button_color:
+    random_choice: 75
+    n64_green: 10
+    gamecube_red: 15
+  c_button_color:
+    random_choice: 75
+    yellow: 25
+  start_button_color:
+    random_choice: 75
+    n64_red: 10
+    gamecube_grey: 15
+  # SFX
+  sfx_navi_overworld:
+    default: 1
+    random_ear_safe: 5
+  sfx_navi_enemy: random_ear_safe
+  sfx_low_hp:
+    default: 1
+    random_ear_safe: 5
+  sfx_menu_cursor:
+    default: 1
+    random_ear_safe: 5
+  sfx_menu_select: random_ear_safe
+  sfx_nightfall:
+    default: 2
+    random_ear_safe: 5
+  sfx_horse_neigh:
+    default: 3
+    random_ear_safe: 5
+  sfx_hover_boots:
+    default: 5
+    random_ear_safe: 2
+  sfx_ocarina:
+    ocarina: 3
+    malon: 1
+    whistle: 1
+    harp: 1
+    grind_organ: 1
+    flute: 1
+  # Item & Location Options
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+
+Super Mario 64:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+  area_rando:
+    off: 1
+    courses_only: 2
+    courses_and_secrets_separate: 2
+    courses_and_secrets: 10
+  buddy_checks: true
+  exclamation_boxes:
+    off: 1
+    1ups_only: 1
+  progressive_keys:
+    false: 3
+    true: 1
+  enable_coin_stars: false
+  enable_move_rando: true
+  move_rando_actions: ['Triple Jump', 'Long Jump', 'Backflip', 'Side Flip', 'Wall Kick', 'Dive', 'Ground Pound', 'Kick', 'Climb', 'Ledge Grab']
+  strict_cap_requirements: true
+  strict_cannon_requirements: true
+  strict_move_requirements: true
+  amount_of_stars: 120
+  first_bowser_star_door_cost: 7
+  basement_star_door_cost: 25
+  second_floor_star_door_cost: 42
+  mips1_cost: 12
+  mips2_cost: 42
+  stars_to_finish: 58
+  death_link: false
+  completion_type: all_bowser_stages
+  # Item & Location Options
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+
+Super Mario World:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+  death_link: false
+  early_climb: false
+  # Goal Options
+  goal:
+    bowser: 5
+    yoshi_egg_hunt: 3
+  bosses_required: 7
+  max_yoshi_egg_cap: 100
+  percentage_of_yoshi_eggs: 69
+  # Sanity Options
+  dragon_coin_checks: false
+  moon_checks: false
+  hidden_1up_checks: false
+  bonus_block_checks: false
+  blocksanity:
+    false: 8
+    true: 1
+  # Level Shuffling
+  bowser_castle_doors: vanilla
+  bowser_castle_rooms:
+    vanilla: 1
+    random_two_room: 1
+  level_shuffle: true
+  exclude_special_zone:
+    false: 1
+    true: 5
+  boss_shuffle:
+    none: 6
+    simple: 4
+  swap_donut_gh_exits: false
+  # Junk and Traps
+  junk_fill_percentage: 0
+  trap_fill_percentage: 15
+  ice_trap_weight: medium
+  stun_trap_weight: medium
+  literature_trap_weight: medium
+  timer_trap_weight: medium
+  reverse_trap_weight: medium
+  thwimp_trap_weight: medium
+  # Aesthetics
+  display_received_item_popups: progression_minus_yoshi_eggs
+  autosave: true
+  overworld_speed: fast
+  music_shuffle:
+    none: 1
+    consistent: 6
+    full: 3
+  sfx_shuffle: none
+  mario_palette:
+    mario: 10
+    luigi: 4
+    wario: 4
+    waluigi: 2
+    geno: 1
+    princess: 1
+    dark: 1
+    sponge: 1
+  level_palette_shuffle:
+    off: 5
+    on_legacy: 2
+    on_curated: 3
+  overworld_palette_shuffle:
+    'off': 5
+    on_legacy: 2
+    on_curated: 3
+  starting_life_count:
+    5: 2
+    10: 5
+    30: 2
+  # Item & Location Options
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+
+Super Metroid:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+  start_inventory_removes_from_pool: true
+  preset: casual
+  start_location: landing_site
+  remote_items: false
+  death_link: disable
+  max_difficulty: medium
+  morph_placement: early
+  hide_items: false
+  strict_minors:
+    false: 3
+    true: 1
+  missile_qty: 30
+  super_qty: 20
+  power_bomb_qty: 10
+  minor_qty: 100
+  energy_qty: vanilla
+  area_randomization: off
+  doors_colors_rando: false
+  boss_randomization: false
+  escape_rando: false
+  remove_escape_enemies: false
+  fun_combat: false
+  fun_movement: false
+  fun_suits: false
+  layout_patches: true
+  varia_tweaks: true
+  nerfed_charge: false
+  gravity_behaviour:
+    balanced: 4
+    progressive: 1
+  elevators_speed: true
+  fast_doors: true
+  spin_jump_restart: true
+  rando_speed: true
+  infinite_space_jump: false
+  refill_before_save:
+    false: 1
+    true: 5
+  hud: true
+  animals:
+    false: 1
+    true: 1
+  no_music: false
+  random_music: false
+  custom_preset:
+    controller: {}
+    knows: {}
+    settings: {}
+  varia_custom_preset: {}
+  tourian: vanilla
+  custom_objective: false
+  # https://github.com/ArchipelagoMW/Archipelago/blob/main/worlds/sm/variaRandomizer/utils/objectives.py
+  objective:
+    - kill all G4
+  custom_objective_list:
+    - random
+  custom_objective_count: 4
+  relaxed_round_robin_cf: true
+  # Item & Location Options
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+
+SMZ3:
+  # Game Options
+  progression_balancing: 50
+  accessibility: items
+  sm_logic: normal
+  sword_location: randomized
+  morph_location:
+    randomized: 1
+    early: 1
+  goal:
+    defeatboth: 1
+    fastganondefeatmotherbrain: 0
+  key_shuffle: none
+  open_tower:
+    5: 3
+    7: 1
+  ganon_vulnerable:
+    5: 1
+    7: 3
+  open_tourian: 4
+  spin_jumps_animation: true
+  heart_beep_speed: quarter
+  heart_color:
+    red: 1
+    green: 1
+    blue: 1
+    yellow: 1
+  quick_swap: true
+  energy_beep: true
+  # Item & Location Options
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+
+Wario Land 4:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+  logic:
+    basic: 1
+    advanced: 2
+  death_link: false
+  # Goal Options
+  goal:
+    golden_diva: 5
+    golden_treasure_hunt: 2
+    local_golden_diva_treasure_hunt: 3
+  golden_treasure_count: 9
+  # World
+  difficulty:
+    normal: 2
+    hard: 6
+    s_hard: 1
+  pool_jewels: 2
+  golden_jewels: 2
+  required_jewels: 1
+  open_doors: closed_diva
+  portal:
+    vanilla: 4
+    open: 1
+  # Quality of Life
+  send_locations_to_server: immediately
+  trap_behavior: accumulate
+  smash_through_hard_blocks: true
+  # Cosmetic
+  music_shuffle:
+    none: 5
+    levels_only: 3
+    levels_and_extras: 1
+  wario_voice_shuffle:
+    false: 3
+    true: 1
+  # Item & Location Options
+  local_items: []
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+
+Metroid Zero Mission:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+  goal: bosses
+  remote_items: true
+  death_link: false
+  # World
+  chozodia_access: open
+  skip_chozodia_stealth: true
+  unknown_items_always_usable: true
+  layout_patches: true
+  morph_ball: early
+  start_with_maps: true
+  # Logic
+  logic_difficulty: normal
+  ibj_in_logic: vertical_only
+  heatruns_lavadives: false
+  walljumps_in_logic: true
+  tricky_shinesparks: false
+  # Cosmetic
+  fast_item_banners: true
+  display_nonlocal_items: match_series
+  # Item & Location Options
+  local_items: ['Bomb']
+  non_local_items: []
+  start_inventory: {}
+  start_hints: []
+  start_location_hints: []
+  exclude_locations:
+  - Mother Ship
+  priority_locations: []
+  item_links: []
+  start_inventory_from_pool: {}
+  junk_fill_weights:
+    Missile Tank: 0
+    Power Bomb Tank: 0
+    Super Missile Tank: 0
+    Nothing: 1
+
+Metroid Prime:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+  required_artifacts: 6
+  final_bosses: both
+  artifact_hints: true
+  missile_launcher:
+    false: 4
+    true: 1
+  main_power_bomb:
+    false: 1
+    true: 2
+  progressive_beam_upgrades:
+    false: 1
+    true: 0
+  spring_ball: true
+  shuffle_scan_visor: false
+  pre_scan_elevators: true
+  non_varia_heat_damage: true
+  staggered_suit_damage:
+    progressive: 1
+    additive: 2
+  elevator_randomization: false
+  starting_room: normal
+  disable_starting_room_bk_prevention: false
+  combat_logic_difficulty: normal_logic
+  trick_difficulty: no_tricks
+  trick_allow_list: []
+  trick_deny_list: []
+  flaahgra_power_bombs: false
+  backwards_lower_mines: false
+  remove_xray_requirements: false
+  remove_thermal_requirements: false
+  remove_hive_mecha: true
+  fusion_suit: false
+  hud_color: default
+  randomize_suit_colors: false
+  show_suit_index_on_pause_menu: false
+  death_link: false
+  # Item & Location Options
+  local_items: ["Morph Ball"]
+  non_local_items: []
+  start_inventory_from_pool: {}
+  start_inventory: {"Charge Beam": 1}
+  start_hints: ["Artifacts"]
+  start_location_hints: []
+  exclude_locations: []
+  priority_locations: []
+  item_links: []
+
+A Link Between Worlds:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+  logic_mode: normal
+  randomize_dungeon_prizes: true
+  lorule_castle_requirement: 7
+  pedestal_requirement: standard
+  nice_items:
+    vanilla: 0
+    shuffled: 1
+  super_items:
+    false: 0
+    true: 1
+  lamp_and_net_as_weapons: false
+  no_progression_enemies:
+    false: 0
+    true: 3
+  assured_weapon:
+    false: 0
+    true: 1
+  maiamai_mayhem:
+    false: 1
+    true: 0
+  initial_crack_state:
+    closed: 1
+    open: 0
+  crack_shuffle: off
+  minigames_excluded: true
+  skip_big_bomb_flower: true
+  trials_required: 0
+  open_trials_door: true
+  bow_of_light_in_castle: false
+  weather_vanes: convenient
+  dark_rooms_lampless: false
+  swordless_mode: false
+  treacherous_tower_floors: 5
+  purple_potion_bottles: false
+  keysy: off
+  # Item & Location Options
+  local_items: []
+  non_local_items: []
+  start_inventory:
+    Bell: 1
+    Pegasus Boots: 1
+    Pouch: 1
+    Progressive Bracelet: 1
+  start_hints: []
+  start_location_hints: []
+  exclude_locations:
+  - Great Rupee Fairy
+  - "[LC] (1F) Center"
+  - "[LC] (1F) Ledge"
+  - "[LC] (2F) Near Torches"
+  - "[LC] (2F) Hidden Path"
+  - "[LC] (2F) Ledge"
+  - "[LC] Bomb Trial (1)"
+  - "[LC] Bomb Trial (2)"
+  - "[LC] Tile Trial (1)"
+  - "[LC] Tile Trial (2)"
+  - "[LC] Lamp Trial"
+  - "[LC] Hook Trial (1)"
+  - "[LC] Hook Trial (2)"
+  - "[LC] (4F) Center"
+  - "[LC] (4F) Hidden Path"
+  - "[LC] Zelda"
+  priority_locations: []
+  item_links: []

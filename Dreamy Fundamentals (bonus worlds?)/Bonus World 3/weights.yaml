@@ -1,0 +1,405 @@
+---
+name: Player{NUMBER}
+game:
+  Aquaria: 2
+  Blasphemous: 3
+  Bomb Rush Cyberfunk: 4
+  Bumper Stickers: 7
+  Celeste 64: 7
+  ChecksFinder: 7
+  Clique: 4
+  DLCQuest: 6
+  Factorio: 6
+  Landstalker - The Treasures of King Nole: 6
+  Lingo: 7
+  A Short Hike: 5
+  Super Mario 64: 6
+  Terraria: 5
+  Timespinner: 7
+  The Witness: 4
+Aquaria:
+  progression_balancing: random
+  accessibility: items
+  objective: random
+  mini_bosses_to_beat: random
+  big_bosses_to_beat: random
+  turtle_randomizer: random
+  early_energy_form: "true"
+  unconfine_home_water: random
+  ingredient_randomizer: random
+  dish_randomizer: random
+  aquarian_translation: random
+  skip_first_vision: random
+  death_link: "true"
+Blasphemous:
+  progression_balancing: random
+  accessibility: items
+  prie_dieu_warp: random
+  skip_cutscenes: random
+  difficulty: random
+  penitence: random
+  starting_location: random
+  ending: random
+  skip_long_quests: random
+  thorn_shuffle: random
+  dash_shuffle: random
+  wall_climb_shuffle: random
+  reliquary_shuffle: random
+  boots_of_pleading: random
+  purified_hand: random
+  start_wheel: random
+  skill_randomizer: random
+  enemy_randomizer: random
+  enemy_groups: random
+  enemy_scaling: random
+  death_link: "true"
+Bomb Rush Cyberfunk:
+  progression_balancing: random
+  accessibility: items
+  skip_intro: random
+  skip_dreams: random
+  skip_statue_hands: random
+  total_rep: random
+  extra_rep_required: random
+  starting_movestyle: random
+  limited_graffiti: random
+  small_graffiti_uses: random
+  skip_polo_photos: random
+  score_difficulty: random
+  damage_multiplier: random
+  death_link: "true"
+Bumper Stickers:
+  progression_balancing: random
+  accessibility: items
+  start_inventory:
+    Starting Paint Can: 1
+    Starting Turner: 1
+    Task Advance: 1
+  task_advances: random
+  turners: random
+  paint_cans: random
+  trap_count: random
+  rainbow_trap_weight: random
+  spinner_trap_weight: random
+  killer_trap_weight: random
+Celeste 64:
+  progression_balancing: random
+  accessibility: items
+  death_link: "true"
+  logic_difficulty: standard
+  badeline_chaser_source: locations
+  badeline_chaser_frequency: "0"
+  badeline_chaser_speed: "3"
+  start_inventory: {}
+  death_link_amnesty: random
+  move_shuffle: random
+  total_strawberries: random
+  strawberries_required_percentage: random
+  friendsanity: random
+  signsanity: random
+  carsanity: random
+ChecksFinder:
+  progression_balancing: random
+  accessibility: items
+Clique:
+  progression_balancing: random
+  accessibility: items
+  hard_mode: "true"
+  start_inventory: {}
+  color: random
+DLCQuest:
+  progression_balancing: random
+  accessibility: items
+  coinsanity: coin
+  coin_bundle_quantity: random
+  permanent_coins: random
+  time_is_money: random
+  ending_choice: random
+  campaign: both
+  item_shuffle: random
+  death_link: "true"
+  start_inventory:
+    Pause Menu Pack: 1
+Factorio:
+  progression_balancing: random
+  accessibility: items
+  tech_tree_information: none
+  death_link: "true"
+  energy_link: "true"
+  start_inventory: {}
+  start_inventory_from_pool: {}
+  max_science_pack: random
+  goal: random
+  tech_tree_layout: random
+  min_tech_cost: random
+  max_tech_cost: random
+  tech_cost_distribution: random
+  tech_cost_mix: random
+  ramping_tech_costs: random
+  silo: random
+  satellite: random
+  free_samples: random
+  recipe_time: random
+  recipe_ingredients: random
+  recipe_ingredients_offset: random
+  imported_blueprints: random
+  progressive: random
+  teleport_traps: random
+  grenade_traps: random
+  cluster_grenade_traps: random
+  artillery_traps: random
+  atomic_rocket_traps: random
+  attack_traps: random
+  evolution_traps: random
+  evolution_trap_increase: random
+Landstalker - The Treasures of King Nole:
+  progression_balancing: random
+  accessibility: items
+  death_link: "true"
+  start_inventory: {}
+  goal: random
+  spawn_region: random
+  jewel_count: random
+  progressive_armors: random
+  use_record_book: random
+  use_spell_book: random
+  shop_prices_factor: random
+  combat_difficulty: random
+  teleport_tree_requirements: random
+  shuffle_trees: random
+  ensure_ekeeke_in_shops: random
+  remove_gumi_boulder: random
+  allow_whistle_usage_behind_trees: random
+  handle_damage_boosting_in_logic: random
+  handle_enemy_jumping_in_logic: random
+  handle_tree_cutting_glitch_in_logic: random
+  hint_count: random
+  revive_using_ekeeke: random
+Lingo:
+  progression_balancing: random
+  accessibility: items
+  shuffle_doors:
+    simple: 50
+    complex: 50
+  location_checks:
+    normal: 25
+    insanity: 50
+  shuffle_colors:
+    "true": 25
+  shuffle_panels:
+    random: 50
+  shuffle_paintings:
+    "false": 25
+  victory_condition:
+    the_end: 25
+    random: 50
+  early_color_hallways:
+    random: 50
+  death_link:
+    "true": 50
+  enable_pilgrimage:
+    random: 50
+  pilgrimage_allows_roof_access:
+    random: 50
+  pilgrimage_allows_paintings:
+    "true": 25
+    random: 50
+  sunwarp_access:
+    random: 50
+  shuffle_sunwarps:
+    random: 50
+  progressive_orange_tower:
+    random: 50
+  progressive_colorful:
+    random: 50
+  mastery_achievements:
+    random: 50
+  level_2_requirement:
+    random: 50
+  trap_percentage:
+    random: 50
+  puzzle_skip_percentage:
+    random: 50
+A Short Hike:
+  progression_balancing: random
+  accessibility: items
+  goal: random
+  filler_coin_amount: random
+  random_walkie_talkie: random
+  golden_feather_progression: random
+  easier_races: random
+  golden_feathers: random
+  silver_feathers: random
+  buckets: random
+  sticks: random
+  toy_shovels: random
+  coins_in_shops: random
+  cost_multiplier: random
+  shop_check_logic: random
+  min_shop_check_logic: random
+Super Mario 64:
+  progression_balancing: random
+  accessibility: items
+  move_rando_actions:
+    - Triple Jump
+    - Long Jump
+    - Backflip
+    - Side Flip
+    - Wall Kick
+    - Dive
+    - Ground Pound
+    - Kick
+    - Climb
+    - Ledge Grab
+  death_link: "true"
+  start_inventory: {}
+  area_rando: random
+  buddy_checks: random
+  exclamation_boxes: random
+  progressive_keys: random
+  enable_coin_stars: random
+  enable_move_rando: random
+  strict_cap_requirements: random
+  strict_cannon_requirements: random
+  strict_move_requirements: random
+  amount_of_stars: random
+  first_bowser_star_door_cost: random
+  basement_star_door_cost: random
+  second_floor_star_door_cost: random
+  mips1_cost: random
+  mips2_cost: random
+  stars_to_finish: random
+  completion_type: random
+Terraria:
+  progression_balancing: random
+  accessibility: items
+  death_link: "true"
+  goal: random
+  achievements: random
+  fill_extra_checks_with: random
+Timespinner:
+  progression_balancing:
+    random: 25
+  accessibility: items
+  StartWithJewelryBox: random
+  DownloadableItems: "true"
+  EyeSpy: random
+  StartWithMeyef: random
+  QuickSeed: random
+  SpecificKeycards: "true"
+  Inverted:
+    random: 50
+  GyreArchives:
+    random: 50
+  Cantoran:
+    random: 50
+  LoreChecks: "true"
+  BossRando:
+    random: 50
+  EnemyRando:
+    random: 50
+  DamageRando:
+    random: 50
+  ExtraEarringsXP:
+    random: 50
+  BossHealing:
+    "true": 25
+  ShopFill:
+    random: 50
+  ShopWarpShards:
+    "true": 25
+  ShopMultiplier:
+    random: 50
+  LootPool:
+    random: 50
+  DropRateCategory:
+    random: 50
+  FixedDropRate:
+    random: 50
+  LootTierDistro:
+    random: 50
+  ShowBestiary:
+    random: 50
+  ShowDrops:
+    random: 50
+  EnterSandman:
+    random: 50
+  DadPercent:
+    random: 50
+  RisingTides:
+    random: 50
+  UnchainedKeys:
+    random: 50
+  TrapChance:
+    random: 50
+  Traps:
+    Bee Trap: 1
+    Chaos Trap: 1
+    Meteor Sparrow Trap: 1
+    Neurotoxin Trap: 1
+    Poison Trap: 1
+  PresentAccessWithWheelAndSpindle:
+    random: 50
+  DeathLink:
+    "true": 50
+The Witness:
+  progression_balancing:
+    random: 25
+  accessibility:
+    items: 25
+  puzzle_randomization:
+    sigma_normal: 25
+    none: 45
+  victory_condition:
+    elevator: 25
+    mountain_box_short: 25
+    mountain_box_long: 25
+  mountain_lasers:
+    random: 50
+  challenge_lasers:
+    random: 50
+  disable_non_randomized_puzzles:
+    "false": 25
+    random: 50
+  shuffle_discarded_panels:
+    "false": 25
+    random: 50
+  shuffle_vault_boxes:
+    "false": 25
+    random: 50
+  shuffle_EPs:
+    off: 25
+  EP_difficulty:
+    normal: 25
+  shuffle_postgame:
+    "false": 25
+  shuffle_symbols:
+    "true": 25
+  shuffle_doors:
+    doors: 50
+  door_groupings:
+    regional: 50
+  shuffle_boat:
+    "true": 25
+  shuffle_lasers:
+    anywhere: 50
+  obelisk_keys:
+    "true": 25
+  trap_percentage:
+    "20": 25
+  puzzle_skip_amount:
+    random: 50
+  hint_amount:
+    "12": 25
+  area_hint_percentage:
+    "33": 25
+  laser_hints:
+    random: 50
+  early_caves:
+    off: 25
+  elevators_come_to_you:
+    "false": 25
+  death_link:
+    "true": 50
+  death_link_amnesty:
+    random: 50

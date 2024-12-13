@@ -1,0 +1,484 @@
+name: Copper
+description: 
+game: A Link to the Past
+A Link to the Past:
+  local_items:
+    - Pegasus Boots
+    - Lamp
+    - Progressive Sword
+    - Moon Pearl
+    
+  accessibility:
+    locations: 0
+    items: 50
+    minimal: 0
+
+  goal:
+    ganon: 0
+    crystals: 0
+    bosses: 50
+    pedestal: 0
+    ganon_pedestal: 0
+    triforce_hunt: 0
+    local_triforce_hunt: 0
+    ganon_triforce_hunt: 0
+    local_ganon_triforce_hunt: 0
+
+  mode:
+    standard: 0
+    open: 50
+    inverted: 0
+
+  glitches_required:
+    no_glitches: 50
+    minor_glitches: 0
+    overworld_glitches: 0
+    hybrid_major_glitches: 0
+    no_logic: 0
+
+  dark_room_logic:
+    lamp: 0
+    torches: 50
+    none: 0
+
+  open_pyramid:
+    closed: 0
+    open: 0
+    goal: 50
+    auto: 0
+
+  crystals_needed_for_gt:
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  crystals_needed_for_ganon:
+    3: 50
+    4: 50
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  triforce_pieces_mode:
+    extra: 0
+    percentage: 0
+    available: 50
+
+  triforce_pieces_percentage:
+    150: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  triforce_pieces_required:
+    20: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  triforce_pieces_available:
+    30: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  triforce_pieces_extra:
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  entrance_shuffle:
+    vanilla: 0
+    dungeons_simple: 0
+    dungeons_full: 0
+    dungeons_crossed: 50
+    simple: 0
+    restricted: 0
+    full: 0
+    crossed: 0
+    insanity: 0
+
+  entrance_shuffle_seed:
+    # You can specify a number to use as an entrance shuffle seed, or a group name. Everyone with the same group name
+    # will get the same entrance shuffle result as long as their Entrance Shuffle, Mode, Retro Caves, and Glitches
+    # Required options are the same.
+    random: 0
+    # early_loc # crossed   Insanity
+    #9001: 50   #   61       98     #   Fully experienced on this insanity seed
+    9003: 50   #   69       79
+    #9006: 50   #   45       99     #   Learning this seed for crossed, have a map of it saved.
+
+  big_key_shuffle:
+    original_dungeon: 0
+    own_dungeons: 0
+    own_world: 0
+    any_world: 0
+    different_world: 0
+    start_with: 50
+
+  small_key_shuffle:
+    original_dungeon: 0
+    own_dungeons: 0
+    own_world: 0
+    any_world: 0
+    different_world: 0
+    start_with: 50
+    universal: 0
+
+  key_drop_shuffle:
+    false: 0
+    true: 50
+
+  compass_shuffle:
+    original_dungeon: 0
+    own_dungeons: 0
+    own_world: 0
+    any_world: 0
+    different_world: 0
+    start_with: 50
+
+  map_shuffle:
+    original_dungeon: 0
+    own_dungeons: 0
+    own_world: 0
+    any_world: 0
+    different_world: 0
+    start_with: 50
+
+  restrict_dungeon_item_on_boss:
+    false: 0
+    true: 50
+
+  item_pool:
+    easy: 50
+    normal: 0
+    hard: 0
+    expert: 0
+
+  item_functionality:
+    easy: 50
+    normal: 0
+    hard: 0
+    expert: 0
+
+  enemy_health:
+    easy: 0
+    default: 50
+    hard: 0
+    expert: 0
+
+  enemy_damage:
+    default: 50
+    shuffled: 0
+    chaos: 0
+
+  progressive:
+    off: 0
+    grouped_random: 0
+    on: 50
+
+  swordless:
+    false: 50
+    true: 0
+
+  dungeon_counters:
+    on: 50
+    pickup: 0
+    default: 0
+    off: 0
+
+  retro_bow:
+    false: 50
+    true: 0
+
+  retro_caves:
+    false: 50
+    true: 0
+
+  hints:
+    off: 0
+    on: 0
+    full: 50
+
+  scams:
+    off: 50
+    king_zora: 0
+    bottle_merchant: 0
+    all: 0
+
+  boss_shuffle:
+    none: 0
+    basic: 0
+    full: 0
+    chaos: 0
+    singularity: 1
+
+  pot_shuffle:
+    false: 50
+    true: 0
+
+  enemy_shuffle:
+    false: 50
+    true: 0
+
+  killable_thieves:
+    false: 0
+    true: 50
+
+  bush_shuffle:
+    false: 50
+    true: 0
+
+  shop_item_slots:
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  randomize_shop_inventories:
+    default: 50
+    randomize_by_shop_type: 0
+    randomize_each: 0
+
+  shuffle_shop_inventories:
+    false: 50
+    true: 0
+
+  include_witch_hut:
+    false: 0
+    true: 50
+
+  randomize_shop_prices:
+    false: 50
+    true: 0
+
+  randomize_cost_types:
+    false: 50
+    true: 0
+
+  shop_price_modifier:
+    200: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  shuffle_capacity_upgrades:
+    off: 0
+    on: 50
+    on_combined: 0
+
+  bombless_start:
+    false: 50
+    true: 0
+
+  shuffle_prizes:
+    off: 0
+    general: 50
+    bonk: 0
+    both: 0
+
+  tile_shuffle:
+    false: 0
+    true: 50
+
+  misery_mire_medallion:
+    ether: 0
+    bombos: 50
+    quake: 0
+    random: 0
+
+  turtle_rock_medallion:
+    ether: 0
+    bombos: 50
+    quake: 0
+    random: 0
+
+  glitch_boots:
+    false: 0
+    true: 50
+
+  beemizer_total_chance:
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  beemizer_trap_chance:
+    60: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  timer:
+    none: 50
+    timed: 0
+    timed_ohko: 0
+    ohko: 0
+    timed_countdown: 0
+    display: 0
+
+  countdown_start_time:
+    10: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  red_clock_time:
+    -2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  blue_clock_time:
+    2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  green_clock_time:
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  death_link:
+    false: 50
+    true: 0
+
+  allow_collect:
+    false: 0
+    true: 50
+
+  ow_palettes:
+    default: 50
+    good: 0
+    blackout: 0
+    puke: 0
+    classic: 0
+    grayscale: 0
+    negative: 0
+    dizzy: 0
+    sick: 0
+
+  uw_palettes:
+    default: 50
+    good: 0
+    blackout: 0
+    puke: 0
+    classic: 0
+    grayscale: 0
+    negative: 0
+    dizzy: 0
+    sick: 0
+
+  hud_palettes:
+    default: 50
+    good: 0
+    blackout: 0
+    puke: 0
+    classic: 0
+    grayscale: 0
+    negative: 0
+    dizzy: 0
+    sick: 0
+
+  sword_palettes:
+    default: 50
+    good: 0
+    blackout: 0
+    puke: 0
+    classic: 0
+    grayscale: 0
+    negative: 0
+    dizzy: 0
+    sick: 0
+
+  shield_palettes:
+    default: 50
+    good: 0
+    blackout: 0
+    puke: 0
+    classic: 0
+    grayscale: 0
+    negative: 0
+    dizzy: 0
+    sick: 0
+
+  heartbeep:
+    normal: 0
+    double: 0
+    half: 0
+    quarter: 50
+    off: 0
+
+  heartcolor:
+    red: 0
+    blue: 50
+    green: 0
+    yellow: 0
+
+  quickswap:
+    false: 0
+    true: 50
+
+  menuspeed:
+    normal: 0
+    instant: 0
+    double: 0
+    triple: 0
+    quadruple: 50
+    half: 0
+
+  music:
+    false: 0
+    true: 50
+
+  reduceflashing:
+    false: 0
+    true: 50
+
+  triforcehud:
+    normal: 0
+    hide_goal: 0
+    hide_required: 0
+    hide_both: 50
+
+  random_sprite_on_event:
+    enabled: 
+      on: 1
+      off: 0
+    on_hit: 
+      on: 1
+      off: 1
+    on_enter: 
+      on: 1
+      off: 1
+    on_exit: 
+      on: 1
+      off: 1
+    on_slash: 
+      on: 1
+      off: 0
+    on_item: 
+      on: 1
+      off: 1
+    on_bonk: 
+      on: 1
+      off: 1
+    on_everything: 
+      on: 0
+      off: 1
+    use_weighted_sprite_pool: 
+      on: 1
+      off: 0
+  sprite:
+    goose: 28
+    boco: 1
+    yunica tovah: 1
+    adol: 1
+    popoi: 1
+requires:
+  version: 0.4.5
