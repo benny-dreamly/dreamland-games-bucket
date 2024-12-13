@@ -1,0 +1,169 @@
+﻿name: Stadium
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default ANIMAL WELL Template
+
+game: ANIMAL WELL
+requires:
+  version: 0.5.0 # Version of Archipelago required for this yaml to work as expected.
+
+ANIMAL WELL:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # - **Locations:** ensure everything can be reached and acquired.
+    # - **Items:** ensure all logically relevant items can be acquired.
+    # - **Minimal:** ensure what is needed to reach your goal can be acquired.
+    locations: 0
+    items: 50
+    minimal: 0
+
+  goal:
+    # What you need to do to beat the game.
+    # Fireworks requires you to get the 4 flames and defeat the Manticore. The House Key is placed in its vanilla location.
+    # Bunny Land requires you to find the 65th Egg, bring it to the incubator, and leave the Well.
+    # Egg Hunt requires you to collect the amount of eggs you need to open the 4th Egg Door, then open the chest inside.
+    fireworks: 50
+    egg_hunt: 0
+
+  eggs_needed:
+    # How many Eggs you need to open the 4th Egg Door.
+    # The amount of Eggs you need for the other 3 doors will scale accordingly.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 64
+    # Maximum value is 64
+    64: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  key_ring:
+    # Have one keyring which unlocks all normal key doors instead of individual key items.
+    # Note: Due to how consumable key logic works, if this option is not enabled, you logically require all 6 keys to open any of the key doors.
+    'false': 0
+    'true': 50
+
+  matchbox:
+    # Have one matchbox which can light all candles instead of individual match items.
+    # Note: Due to how consumable item logic works, if this option is not enabled, you logically require all 9 matches to light any of the candles.
+    'false': 0
+    'true': 50
+
+  random_final_egg_location:
+    # Choose whether the 65th Egg is shuffled into the multiworld item pool or placed in its vanilla location, requiring opening the 4th Egg Door to access it.
+    # This option is forced on if you have the egg hunt goal selected.
+    'false': 50
+    'true': 0
+
+  bunnies_as_checks:
+    # Include the secret bunnies as checks.
+    # Exclude Tedious removes the Mural, Dream, UV, and Floor is Lava bunnies.
+    'off': 0
+    exclude_tedious: 50
+    all_bunnies: 0
+
+  bunny_warps_in_logic:
+    # Include the songs that warp you to Bunny spots in logic.
+    # If you have Bunnies as Checks enabled, this option is automatically enabled.
+    'false': 0
+    'true': 50
+
+  candle_checks:
+    # Lighting each of the candles sends a check.
+    'off': 0
+    'on': 50
+
+  exclude_song_chests:
+    # Exclude the Wheel chest and Office Key chests, so that you don't have to play their songs.
+    # They will contain either filler or traps.
+    'false': 50
+    'true': 0
+
+  # Logic Options
+  bubble_jumping:
+    # Include using the standard Bubble Wand and chaining bubble jumps together in logic.
+    # Exclude Long Chains makes it so you may be required to chain a few bubble jumps before landing.
+    'off': 0
+    exclude_long_chains: 0
+    'on': 50
+
+  disc_hopping:
+    # Include jumping onto the disc without letting it bounce off of a wall first in logic.
+    # Single means doing it once from the ground.
+    # Multiple means having to chain them in midair.
+    # Exception: The bunny that requires you to use this tech.
+    'off': 0
+    single: 0
+    multiple: 50
+
+  wheel_hopping:
+    # Include some tricks that involve using the wheel in unconventional ways.
+    # Simple means toggling wheel midair to "double jump", or mashing against walls to climb them.
+    # Advanced also adds more complicated tech, such as braking on walls or climbing walls out of jumps.
+    # Note: Tricks using wheel desyncs or wrong warps are not ever considered logical.
+    'off': 0
+    simple: 0
+    advanced: 50
+
+  weird_tricks:
+    # Include performing "weird" tricks in the logic.
+    # Some of these tricks are difficult, tedious, or inconsistent.
+    # Use at your own risk.
+    'false': 0
+    'true': 50
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
+
+  start_inventory_from_pool:
+    # Start with these items and don't place them in the world.
+    # 
+    # The game decides what the replacement items will be.
+    {}
