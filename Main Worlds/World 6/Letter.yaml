@@ -1,0 +1,176 @@
+﻿name: Letter
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Final Fantasy IV Free Enterprise Template
+
+game: Final Fantasy IV Free Enterprise
+requires:
+  version: 0.5.0 # Version of Archipelago required for this yaml to work as expected.
+
+Final Fantasy IV Free Enterprise:
+  # Game Options
+  progression_balancing: normal
+  accessibility: locations
+
+  PrimaryObjective:
+    # The primary objective of the game.
+    vanilla: 0
+    forge: 0
+    giant: 0
+    fiends: 50
+    darkmatterhunt: 0
+
+  AdditionalObjectives:
+    # The number of additional objectives on top of the primary one.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    8: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  ObjectiveReward:
+    # The reward for clearing all objectives. Note that this is ignored for a vanilla objective,
+    # and Forge the Crystal forces this to the Crystal setting
+    crystal: 50
+    win: 0
+
+  NoFreeCharacters:
+    'false': 50
+    'true': 0
+
+  NoEarnedCharacters:
+    'false': 50
+    'true': 0
+
+  HeroChallenge:
+    none: 50
+    cecil: 0
+    kain: 0
+    rydia: 0
+    tellah: 0
+    edward: 0
+    rosa: 0
+    yang: 0
+    palom: 0
+    porom: 0
+    cid: 0
+    edge: 0
+    fusoya: 0
+    random_character: 0
+
+  PassEnabled:
+    'false': 50
+    'true': 0
+
+  UsefulPercentage:
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 25
+    # Maximum value is 100
+    100: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  UnsafeKeyItemPlacement:
+    # Normally, underground access is guaranteed to be available without taking a trip to the moon.
+    # Toggling this on disables this check.
+    'false': 50
+    'true': 0
+
+  PassInShops:
+    # Can the pass show up in shops? This is a convenience feature and will never be required by the logic.
+    'false': 0
+    'true': 50
+
+  AllowedCharacters:
+    # Pool of characters allowed to show up. Note that if Hero Challenge is enabled, your hero will still appear.
+    #['Cecil', 'Kain', 'Rydia', 'Tellah', 'Edward', 'Rosa', 'Yang', 'Palom', 'Porom', 'Cid', 'Edge', 'Fusoya']
+    ['Rydia', 'Cecil']
+
+  EnsureAllCharacters:
+    # Ensure at least one instance of each allowed character is available, if possible.
+    'false': 0
+    'true': 50
+
+  AllowDuplicateCharacters:
+    # Allows multiple instances of the same character to join your party.
+    'false': 0
+    'true': 50
+
+  RestrictedCharacters:
+    # List of characters that can't appear in the easiest to access locations if possible.
+    #['Edge', 'Fusoya']
+    ['Fusoya']
+
+  PartySize:
+    # Maximum party size.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 5
+    5: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  CharactersPermajoin:
+    # If enabled, characters may not be dismissed from the party.
+    'false': 50
+    'true': 0
+
+  CharactersPermadie:
+    # If enabled, characters petrified or dead at the end of battle will be removed from your party forever.
+    # On Extreme difficulty, this also includes "cutscene" fights (Mist, Dark Elf, etc.)
+    'no': 50
+    'yes': 0
+    extreme: 0
+
+  MinTier:
+    # The minimum tier of items that can appear in the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 5
+    4: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  MaxTier:
+    # The maximum tier of items that can appear in the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 5
+    # Maximum value is 8
+    8: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  JunkTier:
+    # Items of this tier or below will automatically be sold for cold hard cash.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  ShopRandomization:
+    # Affects the placement of items in shops. See FE documentation for more for now.
+    vanilla: 0
+    shuffle: 0
+    standard: 0
+    pro: 0
+    wild: 50
+    cabins: 0
+
+  FreeShops:
+    # Everything must go!
+    'false': 0
+    'true': 50

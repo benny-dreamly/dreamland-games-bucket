@@ -1,0 +1,100 @@
+﻿name: Relax
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Simon Tatham's Portable Puzzle Collection Template
+
+game: Simon Tatham's Portable Puzzle Collection
+requires:
+  version: 0.5.0 # Version of Archipelago required for this yaml to work as expected.
+
+Simon Tatham's Portable Puzzle Collection:
+  # Game Options
+  progression_balancing: normal
+  accessibility: items
+
+  puzzle_count:
+    # Number of puzzles to randomly generate.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 200
+    120: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  starting_puzzles:
+    # Number of puzzles to randomly add to the starting inventory. These will be
+    # removed from the item pool.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 20
+    5: 40
+    4: 50
+    3: 40
+    2: 30
+    1: 20
+    0: 10
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  completion_percentage:
+    # Percent of puzzles which must be completed to finish the world, rounding up.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 20
+    # Maximum value is 100
+    90: 50
+    80: 40
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  genre_weights:
+    # Relative chance for each genre to be selected as a random preset. Remove a genre from this list to disable it.
+    blackbox: 5
+    bridges: 10
+    dominosa: 15
+    fifteen: 6
+    filling: 10
+    flood: 2
+    galaxies: 10
+    guess: 10
+    inertia: 10
+    keen: 20
+    lightup: 10
+    loopy: 20
+    magnets: 20
+    map: 5
+    mines: 10
+    mosaic: 20
+    net: 10
+    palisade: 20
+    pattern: 20
+    pearl: 20
+    pegs: 2
+    range: 20
+    rect: 10
+    signpost: 10
+    singles: 10
+    sixteen: 10
+    slant: 10
+    solo: 5
+    tents: 20
+    towers: 5
+    tracks: 20
+    undead: 5
+    unequal: 5
+    unruly: 5
+    untangle: 10
+
+  preset_overrides:
+    # List of presets to use for a given genre. Replaces the default presets for that puzzle if specified.
+    # 
+    # For example, to make Net puzzles always use wrapping grids, use:
+    # net: [5x5w, 7x7w, 9x9w, 11x11w]
+    {
+
+    }

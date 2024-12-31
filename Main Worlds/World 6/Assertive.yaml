@@ -1,0 +1,556 @@
+﻿name: Assertive
+description: Send help.
+
+game: Pokemon FireRed and LeafGreen
+requires:
+  version: 0.5.0 # Version of Archipelago required for this yaml to work as expected.
+
+Pokemon FireRed and LeafGreen:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # - **Locations:** ensure everything can be reached and acquired.
+    # - **Items:** ensure all logically relevant items can be acquired.
+    # - **Minimal:** ensure what is needed to reach your goal can be acquired.
+    locations: 0
+    items: 50
+    minimal: 0
+
+  game_version:
+    # Select FireRed or LeafGreen version.
+    firered: 50
+    leafgreen: 0
+    random: 0
+
+  shuffle_badges:
+    # Shuffle Gym Badges into the general item pool. If turned off, Badges will be shuffled among themselves.
+    'false': 0
+    'true': 50
+
+  shuffle_hidden:
+    # Shuffle Hidden Items into the general item pool.
+    # 
+    # - Off: Hidden Items are not shuffled.
+    # - Nonrecurring: Nonrecurring Hidden Items are shuffled.
+    # - All: All Hidden Items are shuffled. Recurring Hidden Items will always appear and will not regenerate.
+    'off': 0
+    nonrecurring: 50
+    all: 0
+
+  extra_key_items:
+    # Adds key items that are required to access the Rocket Hideout, Safari Zone, Pokémon Mansion, and Power Plant.
+    # 
+    # Adds four new locations:
+    # - Item in the Celadon Rocket House
+    # - Item given by a Worker in the Fuchsia Safari Office
+    # - Item given by the Scientist in the Cinnabar Pokémon Lab Research Room
+    # - Hidden Item in the Cerulean Gym (requires Surf & Itemfinder)
+    'false': 50
+    'true': 0
+
+  trainersanity:
+    # Defeating a trainer gives you an item.
+    # 
+    # Trainers are no longer missable. Each trainer will add a random filler item into the pool.
+    'false': 50
+    'true': 0
+
+  itemfinder_required:
+    # Sets whether the Itemfinder if required for Hidden Items. Some items cannot be picked up without using the
+    # Itemfinder regardless of this setting (e.g. the Leftovers under Snorlax on Route 12 & 16).
+    # 
+    # - Off: The Itemfinder is not required to pickup Hidden Items.
+    # - Logic: The Itemfinder is logically required to pickup Hidden Items.
+    # - Required: The Itemfinder is required to pickup Hidden Items.
+    'off': 50
+    logic: 0
+    required: 0
+
+  flash_required: logic
+
+  remove_badge_requirement:
+    # Removes the badge requirement to use any of the HMs listed.
+    # 
+    # HMs need to be listed by the move name. (e.g. Cut, Fly, Surf, etc.)
+    - Fly
+
+  oaks_aide_route_2:
+    # Sets the number of Pokémon that need to be registered in the Pokédex to receive the item from Professor Oak's Aide
+    # on Route 2. Vanilla is 10.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  oaks_aide_route_10:
+    # Sets the number of Pokémon that need to be registered in the Pokédex to receive the item from Professor Oak's Aide
+    # on Route 10. Vanilla is 20.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  oaks_aide_route_11:
+    # Sets the number of Pokémon that need to be registered in the Pokédex to receive the item from Professor Oak's Aide
+    # on Route 11. Vanilla is 30.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    1: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  oaks_aide_route_16:
+    # Sets the number of Pokémon that need to be registered in the Pokédex to receive the item from Professor Oak's Aide
+    # on Route 16. Vanilla is 40.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  oaks_aide_route_15:
+    # Sets the number of Pokémon that need to be registered in the Pokédex to receive the item from Professor Oak's Aide
+    # on Route 15. Vanilla is 50.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 50
+    2: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  viridian_city_roadblock:
+    # Sets the requirement for passing the Viridian City Roadblock.
+    # 
+    # - Vanilla: The Old Man moves out of the way after delivering Oak's Parcel.
+    # - Early Parcel: Same as Vanilla but Oak's Parcel will be available at the beginning of your game.
+    # - Open: The Old Man is moved out of the way at the start of the game.
+    vanilla: 0
+    early_parcel: 50
+    open: 0
+
+  pewter_city_roadblock:
+    # Sets the requirement for passing the Pewter City Roadblock.
+    # 
+    # - Open: The boy will not stop you from entering Route 3.
+    # - Brock: The boy will stop you from entering Route 3 until you defeat Brock.
+    # - Any Gym Leader: The boy will stop you from entering Route 3 until you defeat any Gym Leader.
+    # - Boulder Badge: The boy will stop you from entering Route 3 until you have the Boulder Badge.
+    # - Any Badge: The boy will stop you from entering Route 3 until you have a Badge.
+    open: 0
+    brock: 50
+    any_gym: 0
+    boulder_badge: 0
+    any_badge: 0
+
+  cerulean_city_roadblocks:
+    # Sets whether the Policeman and Slowpoke are blocking the exits of the city until you save Bill.
+    'false': 0
+    'true': 50
+
+  viridian_gym_requirement:
+    # Sets the requirement for opening the Viridian Gym.
+    # 
+    # - Badges: Obtain some number of Badges.
+    # - Gyms: Beat some number of Gyms.
+    badges: 50
+    gyms: 0
+
+  viridian_gym_count:
+    # Sets the number of Badges/Gyms required to open the Viridian Gym.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 7
+    7: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  route22_gate_requirement:
+    # Sets the requirement for passing through the Route 22 Gate.
+    # 
+    # - Badges: Obtain some number of Badges.
+    # - Gyms: Beat some number of Gyms.
+    badges: 50
+    gyms: 0
+
+  route22_gate_count:
+    # Sets the number of Badges/Gyms required to pass through the Route 22 Gate.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    7: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  route23_guard_requirement:
+    # Sets the requirement for passing the Route 23 Guard.
+    # 
+    # - Badges: Obtain some number of Badges.
+    # - Gyms: Beat some number of Gyms.
+    badges: 50
+    gyms: 0
+
+  route23_guard_count:
+    # Sets the number of Badges/Gyms required to pass the Route 23 Guard.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    7: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  elite_four_requirement:
+    # Sets the requirement for challenging the Elite Four.
+    # 
+    # - Badges: Obtain some number of Badges.
+    # - Gyms: Beat some number of Gyms.
+    badges: 50
+    gyms: 0
+
+  elite_four_count:
+    # Sets the number of Badges/Gyms required to challenge the Elite Four.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    8: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  cerulean_cave_requirement:
+    # Sets the requirement for being able to enter Cerulean Cave.
+    # 
+    # - Vanilla: Become the Champion and restore the Network Machine on the Sevii Islands.
+    # - Champion: Become the Champion.
+    # - Network Machine: Restore the Network Machine on the Sevii Islands.
+    # - Badges: Obtain some number of Badges.
+    # - Gyms: Beat some number of Gyms.
+    vanilla: 50
+    champion: 0
+    restore_network: 0
+    badges: 0
+    gyms: 0
+
+  cerulean_cave_count:
+    # Sets the number of Badges/Gyms required to enter Cerulean Cave. This setting only matters if the Cerulean Cave
+    # Requirement is set to either Badges or Gyms.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 8
+    8: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  level_scaling:
+    # Sets whether encounter levels are scaled by sphere access.
+    'false': 50
+    'true': 0
+
+  modify_trainer_levels:
+    # Modifies the level of all Trainer's Pokémon by the specified percentage.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is -100
+    # Maximum value is 100
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  wild_pokemon:
+    # Randomizes wild Pokémon encounters (grass, caves, water, fishing)
+    # 
+    # - Vanilla: Wild Pokémon are unchanged
+    # - Match Base Stats: Wild Pokémon are replaced with species with approximately the same BST
+    # - Match Type: Wild Pokémon are replaced with species that share a type with the original
+    # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
+    # - Completely Random: There are no restrictions
+    vanilla: 0
+    match_base_stats: 0
+    match_type: 0
+    match_base_stats_and_type: 0
+    completely_random: 50
+
+  wild_pokemon_groups:
+    # If wild Pokémon are not vanilla, they will be randomized according to the grouping specified.
+    # 
+    # - None: Pokémon are not randomized together based on any groupings
+    # - Dungeons: All Pokémon of the same species in a dungeon are randomized together
+    # - Species: All Pokémon of the same species are randomized together
+    none: 50
+    dungeons: 0
+    species: 0
+
+  wild_pokemon_blacklist:
+    # Prevents listed species from appearing in the wild when wild Pokémon are randomized.
+    # 
+    # May be overridden if enforcing other restrictions in combination with this blacklist is impossible.
+    # 
+    # Use "Legendaries" as a shortcut for all legendary Pokémon.
+    - Shedinja
+
+  starters:
+    # Randomizes the starter Pokémon in Professor Oak's Lab.
+    # 
+    # - Vanilla: Starters are unchanged
+    # - Match Base Stats: Starters are replaced with species with approximately the same BST
+    # - Match Type: Starters are replaced with species that share a type with the original
+    # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
+    # - Completely Random: There are no restrictions
+    vanilla: 0
+    match_base_stats: 0
+    match_type: 0
+    match_base_stats_and_type: 0
+    completely_random: 50
+
+  starter_blacklist:
+    # Prevents listed species from appearing as a starter when starters are randomized.
+    # 
+    # May be overridden if enforcing other restrictions in combination with this blacklist is impossible.
+    # 
+    # Use "Legendaries" as a shortcut for all legendary Pokémon.
+    - Shedinja
+
+  trainers:
+    # Randomizes the Pokémon in all trainer's parties.
+    # 
+    # - Vanilla: Parties are unchanged
+    # - Match Base Stats: Trainer Pokémon are replaced with species with approximately the same BST
+    # - Match Type: Trainer Pokémon are replaced with species that share a type with the original
+    # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
+    # - Completely Random: There are no restrictions
+    vanilla: 0
+    match_base_stats: 0
+    match_type: 0
+    match_base_stats_and_type: 0
+    completely_random: 50
+
+  trainer_blacklist:
+    # Prevents listed species from appearing in trainer's parties when trainer's parties are randomized.
+    # 
+    # May be overridden if enforcing other restrictions in combination with this blacklist is impossible.
+    # 
+    # Use "Legendaries" as a shortcut for all legendary Pokémon.
+    []
+
+  legendary_pokemon:
+    # Randomizes legendary Pokémon (Mewtwo, Zapdos, Deoxys, etc.). Does not randomize the roamer.
+    # 
+    # - Vanilla: Legendary encounters are unchanged
+    # - Legendaries: Legendary encounters are replaced with another legendary Pokémon
+    # - Match Base Stats: Legendary encounters are replaced with species with approximately the same BST
+    # - Match Type: Legendary encounters are replaced with species that share a type with the original
+    # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
+    # - Completely Random: There are no restrictions
+    vanilla: 0
+    legendaries: 0
+    match_base_stats: 50
+    match_type: 0
+    match_base_stats_and_type: 0
+    completely_random: 0
+
+  misc_pokemon:
+    # Randomizes misc Pokémon. This includes non-legendary static encounters, gift Pokémon, and trade Pokémon
+    # 
+    # - Vanilla: Species are unchanged
+    # - Match Base Stats: Species are replaced with species with approximately the same bst
+    # - Match Type: Species are replaced with species that share a type with the original
+    # - Match Base Stats and Type: Apply both Match Base Stats and Match Type
+    # - Completely Random: There are no restrictions
+    vanilla: 0
+    match_base_stats: 0
+    match_type: 0
+    match_base_stats_and_type: 0
+    completely_random: 50
+
+  types:
+    # Randomizes the type(s) of every Pokémon. Each species will have the same number of types.
+    # 
+    # - Vanilla: Types are unchanged
+    # - Shuffle: Types are shuffled globally for all species (e.g. every Water-type Pokémon becomes Fire-type)
+    # - Completely Random: Each species has its type(s) randomized
+    # - Follow Evolutions: Types are randomized per evolution line instead of per species
+    vanilla: 50
+    shuffle: 0
+    completely_random: 0
+    follow_evolutions: 0
+
+  abilities:
+    # Randomizes abilities of every species. Each species will have the same number of abilities.
+    # 
+    # - Vanilla: Abilities are unchanged
+    # - Completely Random: Each species has its abilities randomized
+    # - Follow Evolutions: Abilities are randomized, but evolutions that normally retain abilities will still do so
+    vanilla: 0
+    completely_random: 50
+    follow_evolutions: 0
+
+  ability_blacklist:
+    # Prevent species from being given these abilities.
+    # 
+    # Has no effect if abilities are not randomized.
+    - Truant
+    - Wonder Guard
+    - Shadow Tag
+    - Arena Trap
+
+  moves:
+    # Randomizes the moves a Pokémon learns through leveling.
+    # Your starter is guaranteed to have a usable damaging move.
+    # 
+    # - Vanilla: Learnset is unchanged
+    # - Randomized: Moves are randomized
+    # - Start with Four Moves: Moves are randomized and all Pokémon know 4 moves at level 1
+    vanilla: 0
+    randomized: 50
+    start_with_four_moves: 0
+
+  move_blacklist:
+    # Prevents species from learning these moves via learnsets, TMs, and move tutors.
+    []
+
+  hm_compatability:
+    # Sets the percent chance that a given HM is compatible with a species.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 50
+    # Maximum value is 100
+    random: 0
+    random-low: 0
+    random-high: 0
+    vanilla: 0 # equivalent to -1
+    full: 50 # equivalent to 100
+
+  tm_tutor_compatability:
+    # Sets the percent chance that a given TM or move tutor is compatible with a species.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 100
+    random: 0
+    random-low: 0
+    random-high: 0
+    vanilla: 0 # equivalent to -1
+    full: 50 # equivalent to 100
+
+  tm_tutor_moves:
+    # Randomizes the moves taught by TMs and move tutors.
+    # 
+    # Some opponents like gym leaders are allowed to use TMs. This option can affect the moves they know.
+    'false': 0
+    'true': 50
+
+  reusable_tm_tutors:
+    # Sets TMs to not break after use (they remain sellable). Allows Move Tutors to be used infinitely.
+    'false': 0
+    'true': 50
+
+  min_catch_rate:
+    # Sets the minimum catch rate a Pokémon can have. It will raise any Pokémon's catch rate to this value if its normal
+    # catch rate is lower than the chosen value.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 3
+    # Maximum value is 255
+    255: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  guaranteed_catch:
+    # Pokeballs are guaranteed to catch wild Pokémon regardless of catch rate.
+    'false': 0
+    'true': 50
+
+  exp_modifier:
+    # Multiplies gained EXP by a percentage.
+    # 
+    # 100 is default
+    # 50 is half
+    # 200 is double
+    # etc.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 1
+    # Maximum value is 1000
+    800: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  blind_trainers:
+    # Trainers will not start a battle with you unless you talk to them.
+    'false': 0
+    'true': 50
+
+  better_shops:
+    # Most Pokemarts will sell all normal Pokemart items. The exceptions are the following:
+    # 
+    # - Celadon Department Store 2F TM Pokemart
+    # - Celadon Department Store 4F Evo Stone Pokemart
+    # - Celadon Department Store 5F Vitamin Pokemart
+    # - Two Island Market Stall
+    'false': 0
+    'true': 50
+
+  free_fly_location:
+    # Enables flying to one random location (excluding cities reachable with no items).
+    'off': 0
+    exclude_indigo: 0
+    any: 50
+
+  turbo_a:
+    # Holding A will advance most text automatically.
+    'false': 0
+    'true': 50
+
+  receive_item_messages:
+    # Sets whether you receive an in-game notification when receiving an item. Items can still onlybe received in the
+    # overworld.
+    # 
+    # - All: Every item shows a message.
+    # - Progression: Only progression items show a message
+    # - None: All items are added to your bag silently (badges will still show).
+    all: 0
+    progression: 50
+    none: 0

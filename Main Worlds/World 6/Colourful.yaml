@@ -1,0 +1,8 @@
+name: Colourful
+game: TUNIC
+description: hey what the fuck thats not allowed it was disabled in the rando. lock this man up immediately. life in jail no parole
+TUNIC:
+  # i love defaults they can make the yaml so much cleaner
+  ability_shuffling: 'true'
+  shuffle_ladders: 'true'
+  fool_traps: 'off'

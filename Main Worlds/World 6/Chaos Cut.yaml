@@ -1,0 +1,80 @@
+﻿name: Chaos
+game: Simon Tatham's Portable Puzzle Collection
+Simon Tatham's Portable Puzzle Collection:
+  progression_balancing: 50
+  accessibility: minimal
+  puzzle_count: 50
+  starting_puzzles: 5
+  completion_percentage: 90
+  genre_weights:
+    blackbox: 10
+    bridges: 10
+    dominosa: 10
+    fifteen: 10
+    filling: 5
+    flood: 5
+    galaxies: 10
+    guess: 5
+    inertia: 10
+    keen: 10
+    lightup: 10
+    loopy: 10
+    magnets: 10
+    map: 5
+    mines: 10
+    mosaic: 10
+    net: 10
+    palisade: 10
+    pattern: 10
+    pearl: 5
+    pegs: 10
+    range: 10
+    rect: 10
+    samegame: 10
+    signpost: 10
+    singles: 10
+    sixteen: 10
+    slant: 10
+    solo: 10
+    tents: 10
+    towers: 10
+    tracks: 10
+    twiddle: 10
+    undead: 10
+    unequal: 10
+    unruly: 10
+    untangle: 10
+
+  preset_overrides:
+    { blackbox: [w5h5m3M3, w8h8m5M5, w8h8m3M6, w10h10m5M5],
+      dominosa: [3dt, 4dt, 5dt, 4db],
+      fifteen: [3x3],
+      filling: [9x7],
+      flip: [3x3c, 4x4c],
+      flood: [12x12c6m5, 12x12c3m0],
+      galaxies: [7x7dn, 10x10dn],
+      guess: [c6p4g10Bm],
+      inertia: [10x8],
+      keen: [4de, 5de, 5dem],
+      lightup: [7x7b20s4d0, 10x10b20s2d0],
+      loopy: [7x7t0de, 7x7t0dn],
+      magnets: [6x5de, 6x5dt, 6x5dtS, 8x7de],
+      map: [20x15n30de],
+      mines: [9x9n10, 16x16n40],
+      mosaic: [5x5, 10x10],
+      net: [5x5, 7x7, 9x9, 11x11],
+      pattern: [10x10],
+      signpost: [4x4c, 4x4, 5x5c, 5x5],
+      slant: [5x5de, 8x8de, 12x10de] }
+---
+name: Cut
+game: Minit
+Minit:
+  progression_balancing: 50
+  accessibility: minimal
+  starting_sword: true
+  darkrooms: off
+  obscure: false
+  progressive_sword: reverse_progressive
+  chosen_goal: toilet_goal
+  death_link: false
